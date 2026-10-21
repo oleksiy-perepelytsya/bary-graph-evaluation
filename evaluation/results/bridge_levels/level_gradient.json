@@ -1,0 +1,528 @@
+{
+  "generated_at": "2026-10-21T15:30:08.624692+00:00",
+  "source": {
+    "database": "barygraph_poc",
+    "collection": "barygraph",
+    "mongo_version": "8.2.6",
+    "documents_total": 5940987,
+    "baryedge_documents": 2681909,
+    "node_documents": 3259080
+  },
+  "definitions": {
+    "baryedge": "A weighted edge with a vector, accumulated_weight and connection_strength.",
+    "bridge": "A baryedge at level L whose parent_edge_id points to a baryedge at L-1.",
+    "child": "A baryedge at level L whose parent_edge_id points to a baryedge at L-2.",
+    "level_scope": "All statistics are by the bridge's own level L."
+  },
+  "method": {
+    "classification": "Parent level resolved with a per-level $lookup on parent_edge_id; docs with parent at L-1 are bridges, docs with parent at L-2 are children.",
+    "means": "Exact full-population $group aggregates.",
+    "quantiles": "MongoDB $percentile (approximate method) over the full bridge population for L11-L14; exact full population for L3-L10.",
+    "read_only": true
+  },
+  "levels": [
+    {
+      "level": 3,
+      "bridges": 77,
+      "accumulated_weight": {
+        "mean": 0.5626,
+        "std": 0.509,
+        "min": 0.0002,
+        "p5": 0.004,
+        "p50": 0.437,
+        "p95": 1.408,
+        "max": 1.4231
+      },
+      "connection_strength": {
+        "mean": 0.3953,
+        "std": 0.3576,
+        "min": 0.0002,
+        "p5": 0.0028,
+        "p50": 0.307,
+        "p95": 0.989,
+        "max": 1.0
+      },
+      "cs_over_w": 0.702703,
+      "gradient": {
+        "delta_w": null,
+        "ratio_w": null
+      }
+    },
+    {
+      "level": 4,
+      "bridges": 78,
+      "accumulated_weight": {
+        "mean": 0.6264,
+        "std": 0.3813,
+        "min": 0.011,
+        "p5": 0.063,
+        "p50": 0.594,
+        "p95": 1.248,
+        "max": 1.2834
+      },
+      "connection_strength": {
+        "mean": 0.4524,
+        "std": 0.2754,
+        "min": 0.0079,
+        "p5": 0.0455,
+        "p50": 0.429,
+        "p95": 0.901,
+        "max": 0.9269
+      },
+      "cs_over_w": 0.722222,
+      "gradient": {
+        "delta_w": 0.0638,
+        "ratio_w": 1.1134
+      }
+    },
+    {
+      "level": 5,
+      "bridges": 253,
+      "accumulated_weight": {
+        "mean": 0.6248,
+        "std": 0.351,
+        "min": 0.0312,
+        "p5": 0.105,
+        "p50": 0.578,
+        "p95": 1.327,
+        "max": 1.3462
+      },
+      "connection_strength": {
+        "mean": 0.4641,
+        "std": 0.2608,
+        "min": 0.0232,
+        "p5": 0.078,
+        "p50": 0.429,
+        "p95": 0.986,
+        "max": 1.0
+      },
+      "cs_over_w": 0.742857,
+      "gradient": {
+        "delta_w": -0.0016,
+        "ratio_w": 0.9974
+      }
+    },
+    {
+      "level": 6,
+      "bridges": 415,
+      "accumulated_weight": {
+        "mean": 0.8302,
+        "std": 0.3168,
+        "min": 0.0,
+        "p5": 0.324,
+        "p50": 0.807,
+        "p95": 1.308,
+        "max": 1.3077
+      },
+      "connection_strength": {
+        "mean": 0.6349,
+        "std": 0.2423,
+        "min": 0.0,
+        "p5": 0.2478,
+        "p50": 0.617,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "cs_over_w": 0.764706,
+      "gradient": {
+        "delta_w": 0.2054,
+        "ratio_w": 1.3287
+      }
+    },
+    {
+      "level": 7,
+      "bridges": 921,
+      "accumulated_weight": {
+        "mean": 1.119,
+        "std": 0.229,
+        "min": 0.0,
+        "p5": 0.705,
+        "p50": 1.259,
+        "p95": 1.269,
+        "max": 1.2692
+      },
+      "connection_strength": {
+        "mean": 0.8816,
+        "std": 0.1804,
+        "min": 0.0,
+        "p5": 0.5554,
+        "p50": 0.992,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "cs_over_w": 0.787879,
+      "gradient": {
+        "delta_w": 0.2888,
+        "ratio_w": 1.3479
+      }
+    },
+    {
+      "level": 8,
+      "bridges": 2258,
+      "accumulated_weight": {
+        "mean": 0.9754,
+        "std": 0.4046,
+        "min": 0.0,
+        "p5": 0.005,
+        "p50": 1.202,
+        "p95": 1.231,
+        "max": 1.2308
+      },
+      "connection_strength": {
+        "mean": 0.7925,
+        "std": 0.3287,
+        "min": 0.0,
+        "p5": 0.0041,
+        "p50": 0.977,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "cs_over_w": 0.8125,
+      "gradient": {
+        "delta_w": -0.1436,
+        "ratio_w": 0.8717
+      }
+    },
+    {
+      "level": 9,
+      "bridges": 4100,
+      "accumulated_weight": {
+        "mean": 0.8448,
+        "std": 0.3915,
+        "min": 0.0,
+        "p5": 0.038,
+        "p50": 1.024,
+        "p95": 1.192,
+        "max": 1.1923
+      },
+      "connection_strength": {
+        "mean": 0.7086,
+        "std": 0.3284,
+        "min": 0.0,
+        "p5": 0.0319,
+        "p50": 0.859,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "cs_over_w": 0.83871,
+      "gradient": {
+        "delta_w": -0.1306,
+        "ratio_w": 0.8661
+      }
+    },
+    {
+      "level": 10,
+      "bridges": 10299,
+      "accumulated_weight": {
+        "mean": 0.5085,
+        "std": 0.3696,
+        "min": 0.0002,
+        "p5": 0.058,
+        "p50": 0.385,
+        "p95": 1.135,
+        "max": 1.1538
+      },
+      "connection_strength": {
+        "mean": 0.4407,
+        "std": 0.3203,
+        "min": 0.0002,
+        "p5": 0.0503,
+        "p50": 0.334,
+        "p95": 0.984,
+        "max": 1.0
+      },
+      "cs_over_w": 0.866667,
+      "gradient": {
+        "delta_w": -0.3363,
+        "ratio_w": 0.6019
+      }
+    },
+    {
+      "level": 11,
+      "bridges": 18499,
+      "accumulated_weight": {
+        "mean": 0.3554,
+        "std": 0.2543,
+        "min": 0.0055,
+        "p5": 0.1332,
+        "p50": 0.2394,
+        "p95": 0.8937,
+        "max": 1.1062
+      },
+      "connection_strength": {
+        "mean": 0.3186,
+        "std": 0.228,
+        "min": 0.0049,
+        "p5": 0.1194,
+        "p50": 0.2146,
+        "p95": 0.8012,
+        "max": 0.9918
+      },
+      "cs_over_w": 0.896552,
+      "gradient": {
+        "delta_w": -0.1531,
+        "ratio_w": 0.6989
+      }
+    },
+    {
+      "level": 12,
+      "bridges": 94623,
+      "accumulated_weight": {
+        "mean": 0.3948,
+        "std": 0.1437,
+        "min": 0.0474,
+        "p5": 0.2273,
+        "p50": 0.3498,
+        "p95": 0.7037,
+        "max": 0.8819
+      },
+      "connection_strength": {
+        "mean": 0.3666,
+        "std": 0.1334,
+        "min": 0.044,
+        "p5": 0.211,
+        "p50": 0.3249,
+        "p95": 0.6534,
+        "max": 0.8189
+      },
+      "cs_over_w": 0.928571,
+      "gradient": {
+        "delta_w": 0.0394,
+        "ratio_w": 1.1109
+      }
+    },
+    {
+      "level": 13,
+      "bridges": 131621,
+      "accumulated_weight": {
+        "mean": 0.6221,
+        "std": 0.1002,
+        "min": 0.2245,
+        "p5": 0.3624,
+        "p50": 0.6441,
+        "p95": 0.734,
+        "max": 0.8373
+      },
+      "connection_strength": {
+        "mean": 0.599,
+        "std": 0.0965,
+        "min": 0.2162,
+        "p5": 0.349,
+        "p50": 0.6202,
+        "p95": 0.7068,
+        "max": 0.8063
+      },
+      "cs_over_w": 0.962963,
+      "gradient": {
+        "delta_w": 0.2273,
+        "ratio_w": 1.5757
+      }
+    },
+    {
+      "level": 14,
+      "bridges": 509204,
+      "accumulated_weight": {
+        "mean": 0.8999,
+        "std": 0.1377,
+        "min": 0.55,
+        "p5": 0.6,
+        "p50": 1.0,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "connection_strength": {
+        "mean": 0.8999,
+        "std": 0.1377,
+        "min": 0.55,
+        "p5": 0.6,
+        "p50": 1.0,
+        "p95": 1.0,
+        "max": 1.0
+      },
+      "cs_over_w": 1.0,
+      "gradient": {
+        "delta_w": 0.2778,
+        "ratio_w": 1.4466
+      }
+    }
+  ],
+  "bridge_vs_children": [
+    {
+      "parent_level": 2,
+      "bridge_level": 3,
+      "bridge_n": 77,
+      "bridge_mean_w": 0.5626,
+      "children_level": 4,
+      "children_n": 154,
+      "children_mean_w": 0.4563,
+      "bridge_over_children": 1.233
+    },
+    {
+      "parent_level": 3,
+      "bridge_level": 4,
+      "bridge_n": 78,
+      "bridge_mean_w": 0.6264,
+      "children_level": 5,
+      "children_n": 156,
+      "children_mean_w": 0.8004,
+      "bridge_over_children": 0.7826
+    },
+    {
+      "parent_level": 4,
+      "bridge_level": 5,
+      "bridge_n": 253,
+      "bridge_mean_w": 0.6248,
+      "children_level": 6,
+      "children_n": 506,
+      "children_mean_w": 0.8309,
+      "bridge_over_children": 0.752
+    },
+    {
+      "parent_level": 5,
+      "bridge_level": 6,
+      "bridge_n": 415,
+      "bridge_mean_w": 0.8302,
+      "children_level": 7,
+      "children_n": 830,
+      "children_mean_w": 0.7845,
+      "bridge_over_children": 1.0583
+    },
+    {
+      "parent_level": 6,
+      "bridge_level": 7,
+      "bridge_n": 921,
+      "bridge_mean_w": 1.119,
+      "children_level": 8,
+      "children_n": 1842,
+      "children_mean_w": 0.932,
+      "bridge_over_children": 1.2006
+    },
+    {
+      "parent_level": 7,
+      "bridge_level": 8,
+      "bridge_n": 2258,
+      "bridge_mean_w": 0.9754,
+      "children_level": 9,
+      "children_n": 4516,
+      "children_mean_w": 0.4878,
+      "bridge_over_children": 1.9996
+    },
+    {
+      "parent_level": 8,
+      "bridge_level": 9,
+      "bridge_n": 4100,
+      "bridge_mean_w": 0.8448,
+      "children_level": 10,
+      "children_n": 8200,
+      "children_mean_w": 0.3615,
+      "bridge_over_children": 2.3369
+    },
+    {
+      "parent_level": 9,
+      "bridge_level": 10,
+      "bridge_n": 10299,
+      "bridge_mean_w": 0.5085,
+      "children_level": 11,
+      "children_n": 20598,
+      "children_mean_w": 0.4303,
+      "bridge_over_children": 1.1817
+    },
+    {
+      "parent_level": 10,
+      "bridge_level": 11,
+      "bridge_n": 18499,
+      "bridge_mean_w": 0.3554,
+      "children_level": 12,
+      "children_n": 36998,
+      "children_mean_w": 0.4117,
+      "bridge_over_children": 0.8632
+    },
+    {
+      "parent_level": 11,
+      "bridge_level": 12,
+      "bridge_n": 94623,
+      "bridge_mean_w": 0.3948,
+      "children_level": 13,
+      "children_n": 189246,
+      "children_mean_w": 0.5861,
+      "bridge_over_children": 0.6736
+    },
+    {
+      "parent_level": 12,
+      "bridge_level": 13,
+      "bridge_n": 131621,
+      "bridge_mean_w": 0.6221,
+      "children_level": 14,
+      "children_n": 263242,
+      "children_mean_w": 0.8462,
+      "bridge_over_children": 0.7352
+    },
+    {
+      "parent_level": 13,
+      "bridge_level": 14,
+      "bridge_n": 509204,
+      "bridge_mean_w": 0.8999,
+      "children_level": 15,
+      "children_n": 1018408,
+      "children_mean_w": 0.8786,
+      "bridge_over_children": 1.0242
+    }
+  ],
+  "invariant": {
+    "formula": "connection_strength = min(1, 26/(40-L)) * accumulated_weight",
+    "note": "The ratio is exactly constant within each level (one unique value at 6 decimals) for bridges, children and roots.",
+    "factors": {
+      "3": 0.702703,
+      "4": 0.722222,
+      "5": 0.742857,
+      "6": 0.764706,
+      "7": 0.787879,
+      "8": 0.8125,
+      "9": 0.83871,
+      "10": 0.866667,
+      "11": 0.896552,
+      "12": 0.928571,
+      "13": 0.962963,
+      "14": 1.0
+    }
+  },
+  "scope_decision": {
+    "include_mb_levels": [
+      9,
+      11,
+      13
+    ],
+    "include_bridge_levels": [
+      10,
+      12,
+      14
+    ],
+    "mb_convention": "MetaBary (MB) = root baryedge (parent_edge_id null, source != structural). Bridge level = MB level + 1.",
+    "mb_counts": {
+      "9": 1683,
+      "11": 55526,
+      "13": 188337
+    },
+    "empty_mb_levels_in_range": {
+      "10": "21 parent=null docs, all structural",
+      "12": "0 parent=null docs"
+    },
+    "exclude_from_features": [
+      "accumulated_weight",
+      "connection_strength"
+    ],
+    "rationale": [
+      "Requested range MB L9-L13 reduces by construction to MB levels 9, 11, 13: levels 10 and 12 contain no root MBs.",
+      "MB 9/11/13 spans maximum bridge dominance (bridge L10), the weight trough (bridge L12), and recovery (bridge L14), with 1,683-188,337 MBs.",
+      "MB L7 is excluded: extreme weight regime (75% of bridges above 1.0) and already represented by the earlier probe.",
+      "Bridge L14 (from MB 13) was heavily degenerate in the earlier 200-MB sample (144/182 triads); the degeneracy filter is mandatory and L13 must be re-checked on the rebuilt cache."
+    ],
+    "level_mapping_note": "This report's per-level table is by bridge level. Training uses MB vectors at levels 9/11/13; their bridges are at levels 10/12/14."
+  },
+  "caveats": [
+    "L15 has no bridges: all 1,018,408 parented L15 docs are children of L13.",
+    "Bridge counts are approximately 1:1 with the previous level's edge count; a few structural/root docs do not emit bridges.",
+    "Accumulated weight is bimodal at several levels (e.g. L8 p5=0.005, p50=1.202); means hide the near-zero population.",
+    "connection_strength is not an independent signal; it is a per-level rescaling of accumulated_weight."
+  ]
+}

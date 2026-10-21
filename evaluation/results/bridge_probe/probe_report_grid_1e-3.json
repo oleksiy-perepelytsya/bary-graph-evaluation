@@ -1,0 +1,1801 @@
+{
+  "meta": {
+    "generated_at": "2026-10-21T11:08:23.106540+00:00",
+    "runtime_seconds": 759.7431063652039,
+    "dataset": "evaluation/results/bridge_probe/dataset.npz",
+    "cases": 2154,
+    "negatives": 9,
+    "levels": [
+      9,
+      7
+    ],
+    "seed": 42,
+    "grouped_split": {
+      "train": {
+        "cases": 1494,
+        "per_level": {
+          "9": 1158,
+          "7": 336
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "val": {
+        "cases": 321,
+        "per_level": {
+          "9": 239,
+          "7": 82
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0012160518848804217
+      },
+      "test": {
+        "cases": 339,
+        "per_level": {
+          "9": 250,
+          "7": 89
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.001145475372279496
+      }
+    },
+    "random_split": {
+      "train": {
+        "cases": 1508,
+        "per_level": {
+          "9": 1153,
+          "7": 355
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "val": {
+        "cases": 323,
+        "per_level": {
+          "9": 247,
+          "7": 76
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "test": {
+        "cases": 323,
+        "per_level": {
+          "9": 247,
+          "7": 76
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0008025682182985554
+      }
+    },
+    "feature_sets": {
+      "cos": "cosine/Jaccard (no weight delta)",
+      "text_only": "Jaccard/overlap/word-count text only",
+      "text_geom": "cosine/Jaccard + overlap/counts (no weight delta)",
+      "vector": "m*b and |m-b| (vector-only learned metric)",
+      "vector_geom": "vector features + cosine/Jaccard",
+      "all": "vector_geom + overlap/counts"
+    },
+    "fallback_band_cases": 5
+  },
+  "grouped": {
+    "baselines": {
+      "grouped/9/all/A0_random": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.132,
+        "top1_strict": 0.132,
+        "mrr": 0.3229809523809524,
+        "mrr_tie": 0.3229809523809524,
+        "tie_rate": 0.0,
+        "margin": -0.38439359485781727
+      },
+      "grouped/9/no_overlap/A0_random": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.13360323886639677,
+        "top1_strict": 0.13360323886639677,
+        "mrr": 0.32564423880213356,
+        "mrr_tie": 0.32564423880213356,
+        "tie_rate": 0.0,
+        "margin": -0.3792747549225071
+      },
+      "grouped/9/all/A1_jaccard": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.968,
+        "top1_strict": 0.012,
+        "mrr": 0.9821333333333334,
+        "mrr_tie": 0.1909668997668998,
+        "tie_rate": 0.9826666666666667,
+        "margin": -0.002815314143896103
+      },
+      "grouped/9/no_overlap/A1_jaccard": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.9676113360323887,
+        "top1_strict": 0.0,
+        "mrr": 0.9819163292847505,
+        "mrr_tie": 0.18114058680860304,
+        "tie_rate": 0.9946018893387315,
+        "margin": -0.004199035948346018
+      },
+      "grouped/9/all/A2_centroid": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.08,
+        "top1_strict": 0.08,
+        "mrr": 0.23194126984126986,
+        "mrr_tie": 0.23194126984126986,
+        "tie_rate": 0.0,
+        "margin": -0.09463244223594666
+      },
+      "grouped/9/no_overlap/A2_centroid": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.07692307692307693,
+        "top1_strict": 0.07692307692307693,
+        "mrr": 0.22895540132382244,
+        "mrr_tie": 0.22895540132382244,
+        "tie_rate": 0.0,
+        "margin": -0.09569315895860495
+      },
+      "grouped/9/all/A3_m_cosine": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.62,
+        "top1_strict": 0.62,
+        "mrr": 0.7080380952380951,
+        "mrr_tie": 0.7080380952380951,
+        "tie_rate": 0.0,
+        "margin": 0.015861764430999757
+      },
+      "grouped/9/no_overlap/A3_m_cosine": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.6194331983805668,
+        "top1_strict": 0.6194331983805668,
+        "mrr": 0.7071910545594755,
+        "mrr_tie": 0.7071910545594755,
+        "tie_rate": 0.0,
+        "margin": 0.015260631256257956
+      },
+      "grouped/9/all/L0_weight_identity_oracle": {
+        "n": 250,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08722780707236961
+      },
+      "grouped/9/no_overlap/L0_weight_identity_oracle": {
+        "n": 247,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08807231683552341
+      },
+      "grouped/7/all/A0_random": {
+        "n": 89,
+        "k": 9,
+        "top1": 0.10112359550561797,
+        "top1_strict": 0.10112359550561797,
+        "mrr": 0.3059568396647048,
+        "mrr_tie": 0.3059568396647048,
+        "tie_rate": 0.0,
+        "margin": -0.3758241331851132
+      },
+      "grouped/7/no_overlap/A0_random": {
+        "n": 88,
+        "k": 9,
+        "top1": 0.10227272727272728,
+        "top1_strict": 0.10227272727272728,
+        "mrr": 0.3078102453102453,
+        "mrr_tie": 0.3078102453102453,
+        "tie_rate": 0.0,
+        "margin": -0.37579690656789033
+      },
+      "grouped/7/all/A1_jaccard": {
+        "n": 89,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.011235955056179775,
+        "mrr": 1.0,
+        "mrr_tie": 0.19101123595505623,
+        "tie_rate": 0.9887640449438202,
+        "margin": 0.0010214504900943027
+      },
+      "grouped/7/no_overlap/A1_jaccard": {
+        "n": 88,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818185,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "grouped/7/all/A2_centroid": {
+        "n": 89,
+        "k": 9,
+        "top1": 0.0898876404494382,
+        "top1_strict": 0.0898876404494382,
+        "mrr": 0.25088728375245234,
+        "mrr_tie": 0.25088728375245234,
+        "tie_rate": 0.0,
+        "margin": -0.0833889480387227
+      },
+      "grouped/7/no_overlap/A2_centroid": {
+        "n": 88,
+        "k": 9,
+        "top1": 0.07954545454545454,
+        "top1_strict": 0.07954545454545454,
+        "mrr": 0.24237463924963928,
+        "mrr_tie": 0.24237463924963928,
+        "tie_rate": 0.0,
+        "margin": -0.08554305407133969
+      },
+      "grouped/7/all/A3_m_cosine": {
+        "n": 89,
+        "k": 9,
+        "top1": 0.7415730337078652,
+        "top1_strict": 0.7415730337078652,
+        "mrr": 0.7928036383092562,
+        "mrr_tie": 0.7928036383092562,
+        "tie_rate": 0.0,
+        "margin": 0.03416856955946161
+      },
+      "grouped/7/no_overlap/A3_m_cosine": {
+        "n": 88,
+        "k": 9,
+        "top1": 0.7386363636363636,
+        "top1_strict": 0.7386363636363636,
+        "mrr": 0.7904491341991342,
+        "mrr_tie": 0.7904491341991342,
+        "tie_rate": 0.0,
+        "margin": 0.03327874161980369
+      },
+      "grouped/7/all/L0_weight_identity_oracle": {
+        "n": 89,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.05006732444862913
+      },
+      "grouped/7/no_overlap/L0_weight_identity_oracle": {
+        "n": 88,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.050042814369695515
+      },
+      "grouped/all/all/A0_random": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.12389380530973451,
+        "top1_strict": 0.12389380530973451,
+        "mrr": 0.3185114950601677,
+        "mrr_tie": 0.3185114950601677,
+        "tie_rate": 0.0,
+        "margin": -0.38214379518563246
+      },
+      "grouped/all/no_overlap/A0_random": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.1253731343283582,
+        "top1_strict": 0.1253731343283582,
+        "mrr": 0.3209594882729211,
+        "mrr_tie": 0.3209594882729211,
+        "tie_rate": 0.0,
+        "margin": -0.3783611708771152
+      },
+      "grouped/all/all/A1_jaccard": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.976401179941003,
+        "top1_strict": 0.011799410029498525,
+        "mrr": 0.9868239921337265,
+        "mrr_tie": 0.19097853965110606,
+        "tie_rate": 0.9842674532940019,
+        "margin": -0.0018080219538514242
+      },
+      "grouped/all/no_overlap/A1_jaccard": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.9761194029850746,
+        "top1_strict": 0.0,
+        "mrr": 0.9866666666666666,
+        "mrr_tie": 0.1813185819155969,
+        "tie_rate": 0.9960199004975125,
+        "margin": -0.0030960056096760195
+      },
+      "grouped/all/all/A2_centroid": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.08259587020648967,
+        "top1_strict": 0.08259587020648967,
+        "mrr": 0.23691529709228826,
+        "mrr_tie": 0.23691529709228826,
+        "tie_rate": 0.0,
+        "margin": -0.09168061042605599
+      },
+      "grouped/all/no_overlap/A2_centroid": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.07761194029850746,
+        "top1_strict": 0.07761194029850746,
+        "mrr": 0.23248045486851465,
+        "mrr_tie": 0.23248045486851465,
+        "tie_rate": 0.0,
+        "margin": -0.09302686274941288
+      },
+      "grouped/all/all/A3_m_cosine": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.6519174041297935,
+        "top1_strict": 0.6519174041297935,
+        "mrr": 0.730292175867397,
+        "mrr_tie": 0.730292175867397,
+        "tie_rate": 0.0,
+        "margin": 0.02066797580690862
+      },
+      "grouped/all/no_overlap/A3_m_cosine": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.6507462686567164,
+        "top1_strict": 0.6507462686567164,
+        "mrr": 0.7290618336886993,
+        "mrr_tie": 0.7290618336886993,
+        "tie_rate": 0.0,
+        "margin": 0.019993746814443103
+      },
+      "grouped/all/all/L0_weight_identity_oracle": {
+        "n": 339,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0774718101593522
+      },
+      "grouped/all/no_overlap/L0_weight_identity_oracle": {
+        "n": 335,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0780824773818134
+      }
+    },
+    "models": [
+      {
+        "label": "L9 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.7866108786610879,
+          "top1_strict": 0.7866108786610879,
+          "mrr": 0.8699093444909344,
+          "mrr_tie": 0.8699093444909344,
+          "tie_rate": 0.0,
+          "margin": 1.8425414194081542
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.804,
+            "top1_strict": 0.804,
+            "mrr": 0.8689492063492064,
+            "mrr_tie": 0.8689492063492064,
+            "tie_rate": 0.0,
+            "margin": 1.7545737161853274,
+            "delta_vs_A3": {
+              "delta": 0.18400000000000005,
+              "ci_low": 0.12,
+              "ci_high": 0.2440000000000001
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8016194331983806,
+            "top1_strict": 0.8016194331983806,
+            "mrr": 0.8673574963048648,
+            "mrr_tie": 0.8673574963048648,
+            "tie_rate": 0.0,
+            "margin": 1.7318443382231559,
+            "delta_vs_A3": {
+              "delta": 0.18218623481781382,
+              "ci_low": 0.12145748987854255,
+              "ci_high": 0.24696356275303644
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.8577405857740585,
+          "top1_strict": 0.8577405857740585,
+          "mrr": 0.9116855947399881,
+          "mrr_tie": 0.9116855947399881,
+          "tie_rate": 0.0,
+          "margin": 2.1605591250571403
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.84,
+            "top1_strict": 0.84,
+            "mrr": 0.8951111111111111,
+            "mrr_tie": 0.8951111111111111,
+            "tie_rate": 0.0,
+            "margin": 2.094401948439224,
+            "delta_vs_A3": {
+              "delta": 0.21999999999999997,
+              "ci_low": 0.15989999999999993,
+              "ci_high": 0.2839999999999999
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8380566801619433,
+            "top1_strict": 0.8380566801619433,
+            "mrr": 0.8938371569950517,
+            "mrr_tie": 0.8938371569950517,
+            "tie_rate": 0.0,
+            "margin": 2.0829940814587276,
+            "delta_vs_A3": {
+              "delta": 0.21862348178137658,
+              "ci_low": 0.16194331983805665,
+              "ci_high": 0.2834008097165992
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text-only HGB",
+        "features": "text_only",
+        "feature_description": "Jaccard/overlap/word-count text only",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "max_iter": 50
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.9832635983263598,
+          "top1_strict": 0.08786610878661087,
+          "mrr": 0.9916317991631799,
+          "mrr_tie": 0.3840282683378917,
+          "tie_rate": 0.509530450953045,
+          "margin": 0.024832844927548066
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.976,
+            "top1_strict": 0.092,
+            "mrr": 0.988,
+            "mrr_tie": 0.36610072150072154,
+            "tie_rate": 0.5555555555555555,
+            "margin": 0.02329644051898729,
+            "delta_vs_A3": {
+              "delta": -0.528,
+              "ci_low": -0.5960000000000001,
+              "ci_high": -0.45599999999999996
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.9757085020242915,
+            "top1_strict": 0.08097165991902834,
+            "mrr": 0.9878542510121457,
+            "mrr_tie": 0.3584015399804874,
+            "tie_rate": 0.5623031938821413,
+            "margin": 0.021358908524001016,
+            "delta_vs_A3": {
+              "delta": -0.5384615384615384,
+              "ci_low": -0.6033400809716599,
+              "ci_high": -0.46558704453441296
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "max_iter": 200
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.8619246861924686,
+          "top1_strict": 0.8619246861924686,
+          "mrr": 0.9013814172809989,
+          "mrr_tie": 0.9011722122600784,
+          "tie_rate": 0.0009298000929800093,
+          "margin": 0.3927038649385804
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.812,
+            "top1_strict": 0.812,
+            "mrr": 0.8608619047619047,
+            "mrr_tie": 0.8608619047619047,
+            "tie_rate": 0.0,
+            "margin": 0.3246425558352738,
+            "delta_vs_A3": {
+              "delta": 0.19200000000000006,
+              "ci_low": 0.124,
+              "ci_high": 0.264
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8097165991902834,
+            "top1_strict": 0.8097165991902834,
+            "mrr": 0.8591719683824947,
+            "mrr_tie": 0.8591719683824947,
+            "tie_rate": 0.0,
+            "margin": 0.3204633134928555,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.11740890688259109,
+              "ci_high": 0.26315789473684204
+            }
+          }
+        }
+      },
+      {
+        "label": "L7 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "7",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 336,
+        "val_cases": 82,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 82,
+          "k": 9,
+          "top1": 0.8414634146341463,
+          "top1_strict": 0.8414634146341463,
+          "mrr": 0.8738821138211382,
+          "mrr_tie": 0.8738821138211382,
+          "tie_rate": 0.0,
+          "margin": 2.9082673026597927
+        },
+        "test": {
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8314606741573034,
+            "top1_strict": 0.8314606741573034,
+            "mrr": 0.866318887105404,
+            "mrr_tie": 0.866318887105404,
+            "tie_rate": 0.0,
+            "margin": 2.819874180397255,
+            "delta_vs_A3": {
+              "delta": 0.0898876404494382,
+              "ci_low": 0.022471910112359605,
+              "ci_high": 0.1573033707865169
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8295454545454546,
+            "top1_strict": 0.8295454545454546,
+            "mrr": 0.8647997835497834,
+            "mrr_tie": 0.8647997835497834,
+            "tie_rate": 0.0,
+            "margin": 2.802521937571701,
+            "delta_vs_A3": {
+              "delta": 0.09090909090909094,
+              "ci_low": 0.022727272727272707,
+              "ci_high": 0.15909090909090906
+            }
+          }
+        }
+      },
+      {
+        "label": "L7 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "7",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 336,
+        "val_cases": 82,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 82,
+          "k": 9,
+          "top1": 0.8414634146341463,
+          "top1_strict": 0.8414634146341463,
+          "mrr": 0.8741192411924119,
+          "mrr_tie": 0.8741192411924119,
+          "tie_rate": 0.0,
+          "margin": 3.1829137077121965
+        },
+        "test": {
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8539325842696629,
+            "top1_strict": 0.8539325842696629,
+            "mrr": 0.8903201355448546,
+            "mrr_tie": 0.8903201355448546,
+            "tie_rate": 0.0,
+            "margin": 3.101203965606512,
+            "delta_vs_A3": {
+              "delta": 0.1123595505617977,
+              "ci_low": 0.0449438202247191,
+              "ci_high": 0.1910112359550562
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8522727272727273,
+            "top1_strict": 0.8522727272727273,
+            "mrr": 0.8890737734487734,
+            "mrr_tie": 0.8890737734487734,
+            "tie_rate": 0.0,
+            "margin": 3.0874298595938843,
+            "delta_vs_A3": {
+              "delta": 0.11363636363636365,
+              "ci_low": 0.045454545454545414,
+              "ci_high": 0.19318181818181812
+            }
+          }
+        }
+      },
+      {
+        "label": "L7 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "7",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 336,
+        "val_cases": 82,
+        "best_param": {
+          "max_iter": 200
+        },
+        "val": {
+          "n": 82,
+          "k": 9,
+          "top1": 0.8902439024390244,
+          "top1_strict": 0.8902439024390244,
+          "mrr": 0.9206445993031358,
+          "mrr_tie": 0.9204228698131136,
+          "tie_rate": 0.0013550135501355014,
+          "margin": 0.5607476005012675
+        },
+        "test": {
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8089887640449438,
+            "top1_strict": 0.8089887640449438,
+            "mrr": 0.8712680577849118,
+            "mrr_tie": 0.8712680577849118,
+            "tie_rate": 0.0,
+            "margin": 0.5461859794280294,
+            "delta_vs_A3": {
+              "delta": 0.0674157303370786,
+              "ci_low": -0.011235955056179692,
+              "ci_high": 0.1460674157303371
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8068181818181818,
+            "top1_strict": 0.8068181818181818,
+            "mrr": 0.8698051948051948,
+            "mrr_tie": 0.8698051948051948,
+            "tie_rate": 0.0,
+            "margin": 0.5432216526168571,
+            "delta_vs_A3": {
+              "delta": 0.06818181818181812,
+              "ci_low": -0.011363636363636354,
+              "ci_high": 0.14772727272727282
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "combined",
+        "model_type": "logreg",
+        "include_level": true,
+        "train_cases": 1494,
+        "val_cases": 321,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 321,
+          "k": 9,
+          "top1": 0.8442367601246106,
+          "top1_strict": 0.8442367601246106,
+          "mrr": 0.8948462147060278,
+          "mrr_tie": 0.8948462147060278,
+          "tie_rate": 0.0,
+          "margin": 2.47801376503125
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.812,
+            "top1_strict": 0.812,
+            "mrr": 0.8804444444444445,
+            "mrr_tie": 0.8804444444444445,
+            "tie_rate": 0.0,
+            "margin": 2.15019969507238,
+            "delta_vs_A3": {
+              "delta": 0.19200000000000006,
+              "ci_low": 0.128,
+              "ci_high": 0.256
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8097165991902834,
+            "top1_strict": 0.8097165991902834,
+            "mrr": 0.8789923526765631,
+            "mrr_tie": 0.8789923526765631,
+            "tie_rate": 0.0,
+            "margin": 2.142133036963345,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.12955465587044535,
+              "ci_high": 0.25506072874493924
+            }
+          },
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8426966292134831,
+            "top1_strict": 0.8426966292134831,
+            "mrr": 0.8910112359550559,
+            "mrr_tie": 0.8910112359550559,
+            "tie_rate": 0.0,
+            "margin": 2.998642560372213,
+            "delta_vs_A3": {
+              "delta": 0.10112359550561789,
+              "ci_low": 0.0449438202247191,
+              "ci_high": 0.1685393258426966
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8409090909090909,
+            "top1_strict": 0.8409090909090909,
+            "mrr": 0.8897727272727273,
+            "mrr_tie": 0.8897727272727273,
+            "tie_rate": 0.0,
+            "margin": 2.988222116705281,
+            "delta_vs_A3": {
+              "delta": 0.10227272727272729,
+              "ci_low": 0.045454545454545414,
+              "ci_high": 0.17045454545454541
+            }
+          },
+          "all/all": {
+            "n": 339,
+            "k": 9,
+            "top1": 0.8200589970501475,
+            "top1_strict": 0.8200589970501475,
+            "mrr": 0.8832186168469354,
+            "mrr_tie": 0.8832186168469354,
+            "tie_rate": 0.0,
+            "margin": 2.3729472319800053,
+            "delta_vs_A3": {
+              "delta": 0.16814159292035402,
+              "ci_low": 0.12094395280235992,
+              "ci_high": 0.21828908554572268
+            }
+          },
+          "all/no_overlap": {
+            "n": 335,
+            "k": 9,
+            "top1": 0.817910447761194,
+            "top1_strict": 0.817910447761194,
+            "mrr": 0.8818242122719734,
+            "mrr_tie": 0.8818242122719734,
+            "tie_rate": 0.0,
+            "margin": 2.3643892728358535,
+            "delta_vs_A3": {
+              "delta": 0.16716417910447767,
+              "ci_low": 0.11940298507462688,
+              "ci_high": 0.21791044776119406
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "combined",
+        "model_type": "hgb",
+        "include_level": true,
+        "train_cases": 1494,
+        "val_cases": 321,
+        "best_param": {
+          "max_iter": 200
+        },
+        "val": {
+          "n": 321,
+          "k": 9,
+          "top1": 0.8566978193146417,
+          "top1_strict": 0.8535825545171339,
+          "mrr": 0.9041796469366563,
+          "mrr_tie": 0.9029748116196714,
+          "tie_rate": 0.0013845621322256835,
+          "margin": 0.4473622060253172
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.808,
+            "top1_strict": 0.808,
+            "mrr": 0.8604492063492064,
+            "mrr_tie": 0.8603539682539684,
+            "tie_rate": 0.0008888888888888888,
+            "margin": 0.32607746095304957,
+            "delta_vs_A3": {
+              "delta": 0.18800000000000006,
+              "ci_low": 0.11599999999999999,
+              "ci_high": 0.26009999999999944
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.805668016194332,
+            "top1_strict": 0.805668016194332,
+            "mrr": 0.8587542574384679,
+            "mrr_tie": 0.858657862605231,
+            "tie_rate": 0.0008996851102114259,
+            "margin": 0.32159494579029574,
+            "delta_vs_A3": {
+              "delta": 0.18623481781376527,
+              "ci_low": 0.10931174089068829,
+              "ci_high": 0.2591093117408907
+            }
+          },
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8539325842696629,
+            "top1_strict": 0.8539325842696629,
+            "mrr": 0.8977973961120029,
+            "mrr_tie": 0.8977316887724931,
+            "tie_rate": 0.0012484394506866417,
+            "margin": 0.5588742954450834,
+            "delta_vs_A3": {
+              "delta": 0.1123595505617977,
+              "ci_low": 0.0337078651685393,
+              "ci_high": 0.2022471910112359
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8522727272727273,
+            "top1_strict": 0.8522727272727273,
+            "mrr": 0.896636002886003,
+            "mrr_tie": 0.8965695488721805,
+            "tie_rate": 0.0012626262626262625,
+            "margin": 0.5582750525533187,
+            "delta_vs_A3": {
+              "delta": 0.11363636363636365,
+              "ci_low": 0.03409090909090906,
+              "ci_high": 0.20454545454545447
+            }
+          },
+          "all/all": {
+            "n": 339,
+            "k": 9,
+            "top1": 0.8200589970501475,
+            "top1_strict": 0.8200589970501475,
+            "mrr": 0.8702544833075806,
+            "mrr_tie": 0.8701669981246133,
+            "tie_rate": 0.000983284169124877,
+            "margin": 0.38719521396128265,
+            "delta_vs_A3": {
+              "delta": 0.16814159292035402,
+              "ci_low": 0.10914454277286134,
+              "ci_high": 0.2271386430678466
+            }
+          },
+          "all/no_overlap": {
+            "n": 335,
+            "k": 9,
+            "top1": 0.817910447761194,
+            "top1_strict": 0.817910447761194,
+            "mrr": 0.8687052831082681,
+            "mrr_tie": 0.8686167533261012,
+            "tie_rate": 0.0009950248756218905,
+            "margin": 0.3837676305519256,
+            "delta_vs_A3": {
+              "delta": 0.16716417910447767,
+              "ci_low": 0.11037313432835813,
+              "ci_high": 0.22686567164179106
+            }
+          }
+        }
+      }
+    ]
+  },
+  "random": {
+    "baselines": {
+      "random/9/all/A0_random": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.08097165991902834,
+        "top1_strict": 0.08097165991902834,
+        "mrr": 0.27886864597390915,
+        "mrr_tie": 0.27886864597390915,
+        "tie_rate": 0.0,
+        "margin": -0.41776843364345295
+      },
+      "random/9/no_overlap/A0_random": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.07883817427385892,
+        "top1_strict": 0.07883817427385892,
+        "mrr": 0.27898307317394455,
+        "mrr_tie": 0.27898307317394455,
+        "tie_rate": 0.0,
+        "margin": -0.41375339774077324
+      },
+      "random/9/all/A1_jaccard": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.9676113360323887,
+        "top1_strict": 0.024291497975708502,
+        "mrr": 0.9838056680161943,
+        "mrr_tie": 0.2012023064654644,
+        "tie_rate": 0.9721097615834458,
+        "margin": -0.0016833369427846994
+      },
+      "random/9/no_overlap/A1_jaccard": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.966804979253112,
+        "top1_strict": 0.0,
+        "mrr": 0.983402489626556,
+        "mrr_tie": 0.1813152269583805,
+        "tie_rate": 0.9963116643614569,
+        "margin": -0.0039055726927593043
+      },
+      "random/9/all/A2_centroid": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.11336032388663968,
+        "top1_strict": 0.11336032388663968,
+        "mrr": 0.2570191504402031,
+        "mrr_tie": 0.2570191504402031,
+        "tie_rate": 0.0,
+        "margin": -0.09082231323728678
+      },
+      "random/9/no_overlap/A2_centroid": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.1078838174273859,
+        "top1_strict": 0.1078838174273859,
+        "mrr": 0.25166139761575446,
+        "mrr_tie": 0.25166139761575446,
+        "tie_rate": 0.0,
+        "margin": -0.09259426148600598
+      },
+      "random/9/all/A3_m_cosine": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.6680161943319838,
+        "top1_strict": 0.6680161943319838,
+        "mrr": 0.7405677655677654,
+        "mrr_tie": 0.7405677655677654,
+        "tie_rate": 0.0,
+        "margin": 0.023728879839785187
+      },
+      "random/9/no_overlap/A3_m_cosine": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.6639004149377593,
+        "top1_strict": 0.6639004149377593,
+        "mrr": 0.7361835605611537,
+        "mrr_tie": 0.7361835605611537,
+        "tie_rate": 0.0,
+        "margin": 0.022644744374445365
+      },
+      "random/9/all/L0_weight_identity_oracle": {
+        "n": 247,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08791479311594415
+      },
+      "random/9/no_overlap/L0_weight_identity_oracle": {
+        "n": 241,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08992052251913007
+      },
+      "random/7/all/A0_random": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.11842105263157894,
+        "top1_strict": 0.11842105263157894,
+        "mrr": 0.30692355889724304,
+        "mrr_tie": 0.30692355889724304,
+        "tie_rate": 0.0,
+        "margin": -0.3645689979042157
+      },
+      "random/7/no_overlap/A0_random": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.11842105263157894,
+        "top1_strict": 0.11842105263157894,
+        "mrr": 0.30692355889724304,
+        "mrr_tie": 0.30692355889724304,
+        "tie_rate": 0.0,
+        "margin": -0.3645689979042157
+      },
+      "random/7/all/A1_jaccard": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818185,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "random/7/no_overlap/A1_jaccard": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818185,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "random/7/all/A2_centroid": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.02631578947368421,
+        "top1_strict": 0.02631578947368421,
+        "mrr": 0.1768379281537176,
+        "mrr_tie": 0.1768379281537176,
+        "tie_rate": 0.0,
+        "margin": -0.08992212148089158
+      },
+      "random/7/no_overlap/A2_centroid": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.02631578947368421,
+        "top1_strict": 0.02631578947368421,
+        "mrr": 0.1768379281537176,
+        "mrr_tie": 0.1768379281537176,
+        "tie_rate": 0.0,
+        "margin": -0.08992212148089158
+      },
+      "random/7/all/A3_m_cosine": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.7105263157894737,
+        "top1_strict": 0.7105263157894737,
+        "mrr": 0.7572890559732665,
+        "mrr_tie": 0.7572890559732665,
+        "tie_rate": 0.0,
+        "margin": 0.029211778389780146
+      },
+      "random/7/no_overlap/A3_m_cosine": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.7105263157894737,
+        "top1_strict": 0.7105263157894737,
+        "mrr": 0.7572890559732665,
+        "mrr_tie": 0.7572890559732665,
+        "tie_rate": 0.0,
+        "margin": 0.029211778389780146
+      },
+      "random/7/all/L0_weight_identity_oracle": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08838569092350362
+      },
+      "random/7/no_overlap/L0_weight_identity_oracle": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08838569092350362
+      },
+      "random/all/all/A0_random": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.08978328173374613,
+        "top1_strict": 0.08978328173374613,
+        "mrr": 0.2854698019558701,
+        "mrr_tie": 0.2854698019558701,
+        "tie_rate": 0.0,
+        "margin": -0.4052509193518677
+      },
+      "random/all/no_overlap/A0_random": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.08832807570977919,
+        "top1_strict": 0.08832807570977919,
+        "mrr": 0.2856817385208552,
+        "mrr_tie": 0.2856817385208552,
+        "tie_rate": 0.0,
+        "margin": -0.40196155424683516
+      },
+      "random/all/all/A1_jaccard": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.9752321981424149,
+        "top1_strict": 0.018575851393188854,
+        "mrr": 0.9876160990712074,
+        "mrr_tie": 0.19664133596022146,
+        "tie_rate": 0.9786721706226349,
+        "margin": -0.001287257662129476
+      },
+      "random/all/no_overlap/A1_jaccard": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.9747634069400631,
+        "top1_strict": 0.0,
+        "mrr": 0.9873817034700315,
+        "mrr_tie": 0.18143580919606161,
+        "tie_rate": 0.9971959341044514,
+        "margin": -0.002969220879984203
+      },
+      "random/all/all/A2_centroid": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.09287925696594428,
+        "top1_strict": 0.09287925696594428,
+        "mrr": 0.2381529804904418,
+        "mrr_tie": 0.2381529804904418,
+        "tie_rate": 0.0,
+        "margin": -0.09061050341225262
+      },
+      "random/all/no_overlap/A2_centroid": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.08832807570977919,
+        "top1_strict": 0.08832807570977919,
+        "mrr": 0.23372264783936708,
+        "mrr_tie": 0.23372264783936708,
+        "tie_rate": 0.0,
+        "margin": -0.09195362224187761
+      },
+      "random/all/all/A3_m_cosine": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.6780185758513931,
+        "top1_strict": 0.6780185758513931,
+        "mrr": 0.7445021868396481,
+        "mrr_tie": 0.7445021868396481,
+        "tie_rate": 0.0,
+        "margin": 0.02501897361625459
+      },
+      "random/all/no_overlap/A3_m_cosine": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.6750788643533123,
+        "top1_strict": 0.6750788643533123,
+        "mrr": 0.7412435531520705,
+        "mrr_tie": 0.7412435531520705,
+        "tie_rate": 0.0,
+        "margin": 0.024219175242475154
+      },
+      "random/all/all/L0_weight_identity_oracle": {
+        "n": 323,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08802559260007578
+      },
+      "random/all/no_overlap/L0_weight_identity_oracle": {
+        "n": 317,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08955255027538367
+      }
+    },
+    "models": [
+      {
+        "label": "L9 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1153,
+        "val_cases": 247,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 247,
+          "k": 9,
+          "top1": 0.8016194331983806,
+          "top1_strict": 0.8016194331983806,
+          "mrr": 0.8699890752522331,
+          "mrr_tie": 0.8699890752522331,
+          "tie_rate": 0.0,
+          "margin": 1.7255908210300555
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8340080971659919,
+            "top1_strict": 0.8340080971659919,
+            "mrr": 0.8929085534348693,
+            "mrr_tie": 0.8929085534348693,
+            "tie_rate": 0.0,
+            "margin": 1.9560763978372215,
+            "delta_vs_A3": {
+              "delta": 0.1659919028340081,
+              "ci_low": 0.10931174089068829,
+              "ci_high": 0.22267206477732793
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8298755186721992,
+            "top1_strict": 0.8298755186721992,
+            "mrr": 0.8902423763419614,
+            "mrr_tie": 0.8902423763419614,
+            "tie_rate": 0.0,
+            "margin": 1.9254094981231547,
+            "delta_vs_A3": {
+              "delta": 0.1659751037344399,
+              "ci_low": 0.10788381742738595,
+              "ci_high": 0.22406639004149376
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1153,
+        "val_cases": 247,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 247,
+          "k": 9,
+          "top1": 0.8421052631578947,
+          "top1_strict": 0.8421052631578947,
+          "mrr": 0.8967707730865625,
+          "mrr_tie": 0.8967707730865625,
+          "tie_rate": 0.0,
+          "margin": 2.023849367177498
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8623481781376519,
+            "top1_strict": 0.8623481781376519,
+            "mrr": 0.9132076987340145,
+            "mrr_tie": 0.9132076987340145,
+            "tie_rate": 0.0,
+            "margin": 2.292031177594205,
+            "delta_vs_A3": {
+              "delta": 0.19433198380566807,
+              "ci_low": 0.1417004048582996,
+              "ci_high": 0.2510121457489878
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8589211618257261,
+            "top1_strict": 0.8589211618257261,
+            "mrr": 0.9110468945531186,
+            "mrr_tie": 0.9110468945531186,
+            "tie_rate": 0.0,
+            "margin": 2.275195349341249,
+            "delta_vs_A3": {
+              "delta": 0.19502074688796678,
+              "ci_low": 0.1410788381742738,
+              "ci_high": 0.25311203319502074
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1153,
+        "val_cases": 247,
+        "best_param": {
+          "max_iter": 100
+        },
+        "val": {
+          "n": 247,
+          "k": 9,
+          "top1": 0.8340080971659919,
+          "top1_strict": 0.8340080971659919,
+          "mrr": 0.8833863504916136,
+          "mrr_tie": 0.8832002792529108,
+          "tie_rate": 0.0008996851102114259,
+          "margin": 0.3619478724867017
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8825910931174089,
+            "top1_strict": 0.8744939271255061,
+            "mrr": 0.9216518861255704,
+            "mrr_tie": 0.9172177237966712,
+            "tie_rate": 0.0031488978857399917,
+            "margin": 0.3818816126930471,
+            "delta_vs_A3": {
+              "delta": 0.20647773279352233,
+              "ci_low": 0.1417004048582996,
+              "ci_high": 0.27125506072874495
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8796680497925311,
+            "top1_strict": 0.8713692946058091,
+            "mrr": 0.9197013106764145,
+            "mrr_tie": 0.915156754264638,
+            "tie_rate": 0.0032272936837252197,
+            "margin": 0.37258288249790117,
+            "delta_vs_A3": {
+              "delta": 0.20746887966804983,
+              "ci_low": 0.13692946058091282,
+              "ci_high": 0.26970954356846477
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "combined",
+        "model_type": "logreg",
+        "include_level": true,
+        "train_cases": 1508,
+        "val_cases": 323,
+        "best_param": {
+          "C": 0.003
+        },
+        "val": {
+          "n": 323,
+          "k": 9,
+          "top1": 0.8390092879256966,
+          "top1_strict": 0.8390092879256966,
+          "mrr": 0.8849783773158386,
+          "mrr_tie": 0.8849783773158386,
+          "tie_rate": 0.0,
+          "margin": 2.957414829327196
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8582995951417004,
+            "top1_strict": 0.8582995951417004,
+            "mrr": 0.911650922177238,
+            "mrr_tie": 0.911650922177238,
+            "tie_rate": 0.0,
+            "margin": 2.9574086130062467,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.1336032388663968,
+              "ci_high": 0.2510121457489878
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8547717842323651,
+            "top1_strict": 0.8547717842323651,
+            "mrr": 0.9094513600737667,
+            "mrr_tie": 0.9094513600737667,
+            "tie_rate": 0.0,
+            "margin": 2.951810587595247,
+            "delta_vs_A3": {
+              "delta": 0.1908713692946058,
+              "ci_low": 0.13278008298755184,
+              "ci_high": 0.25311203319502074
+            }
+          },
+          "7/all": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.868421052631579,
+            "top1_strict": 0.868421052631579,
+            "mrr": 0.8990131578947367,
+            "mrr_tie": 0.8990131578947367,
+            "tie_rate": 0.0,
+            "margin": 3.785935729869984,
+            "delta_vs_A3": {
+              "delta": 0.1578947368421053,
+              "ci_low": 0.07894736842105265,
+              "ci_high": 0.23684210526315796
+            }
+          },
+          "7/no_overlap": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.868421052631579,
+            "top1_strict": 0.868421052631579,
+            "mrr": 0.8990131578947367,
+            "mrr_tie": 0.8990131578947367,
+            "tie_rate": 0.0,
+            "margin": 3.785935729869984,
+            "delta_vs_A3": {
+              "delta": 0.1578947368421053,
+              "ci_low": 0.07894736842105265,
+              "ci_high": 0.23684210526315796
+            }
+          },
+          "all/all": {
+            "n": 323,
+            "k": 9,
+            "top1": 0.8606811145510835,
+            "top1_strict": 0.8606811145510835,
+            "mrr": 0.9086773305813554,
+            "mrr_tie": 0.9086773305813554,
+            "tie_rate": 0.0,
+            "margin": 3.152356169915361,
+            "delta_vs_A3": {
+              "delta": 0.1826625386996904,
+              "ci_low": 0.1331269349845201,
+              "ci_high": 0.2321981424148607
+            }
+          },
+          "all/no_overlap": {
+            "n": 317,
+            "k": 9,
+            "top1": 0.8580441640378549,
+            "top1_strict": 0.8580441640378549,
+            "mrr": 0.9069488257974063,
+            "mrr_tie": 0.9069488257974063,
+            "tie_rate": 0.0,
+            "margin": 3.1517901169734173,
+            "delta_vs_A3": {
+              "delta": 0.18296529968454256,
+              "ci_low": 0.13249211356466872,
+              "ci_high": 0.2302839116719243
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "combined",
+        "model_type": "hgb",
+        "include_level": true,
+        "train_cases": 1508,
+        "val_cases": 323,
+        "best_param": {
+          "max_iter": 100
+        },
+        "val": {
+          "n": 323,
+          "k": 9,
+          "top1": 0.8668730650154799,
+          "top1_strict": 0.8606811145510835,
+          "mrr": 0.9078935082805052,
+          "mrr_tie": 0.9023764126158954,
+          "tie_rate": 0.00894392844857241,
+          "margin": 0.41226900356161156
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.9068825910931174,
+            "top1_strict": 0.8825910931174089,
+            "mrr": 0.9332979885611465,
+            "mrr_tie": 0.921216008462972,
+            "tie_rate": 0.009896536212325687,
+            "margin": 0.37289606137347614,
+            "delta_vs_A3": {
+              "delta": 0.21457489878542513,
+              "ci_low": 0.1497975708502024,
+              "ci_high": 0.27935222672064786
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.9045643153526971,
+            "top1_strict": 0.8796680497925311,
+            "mrr": 0.9316373575709674,
+            "mrr_tie": 0.9192545812877763,
+            "tie_rate": 0.010142923005993546,
+            "margin": 0.362479211798508,
+            "delta_vs_A3": {
+              "delta": 0.2157676348547718,
+              "ci_low": 0.1452282157676349,
+              "ci_high": 0.2821576763485477
+            }
+          },
+          "7/all": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.9342105263157895,
+            "top1_strict": 0.9342105263157895,
+            "mrr": 0.9526315789473685,
+            "mrr_tie": 0.9526315789473685,
+            "tie_rate": 0.0,
+            "margin": 0.563649443580645,
+            "delta_vs_A3": {
+              "delta": 0.22368421052631582,
+              "ci_low": 0.13157894736842102,
+              "ci_high": 0.3157894736842105
+            }
+          },
+          "7/no_overlap": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.9342105263157895,
+            "top1_strict": 0.9342105263157895,
+            "mrr": 0.9526315789473685,
+            "mrr_tie": 0.9526315789473685,
+            "tie_rate": 0.0,
+            "margin": 0.563649443580645,
+            "delta_vs_A3": {
+              "delta": 0.22368421052631582,
+              "ci_low": 0.13157894736842102,
+              "ci_high": 0.3157894736842105
+            }
+          },
+          "all/all": {
+            "n": 323,
+            "k": 9,
+            "top1": 0.913312693498452,
+            "top1_strict": 0.8947368421052632,
+            "mrr": 0.937847068652022,
+            "mrr_tie": 0.9286079074004772,
+            "tie_rate": 0.007567939456484349,
+            "margin": 0.417779210128104,
+            "delta_vs_A3": {
+              "delta": 0.21671826625387003,
+              "ci_low": 0.1609907120743035,
+              "ci_high": 0.27244582043343657
+            }
+          },
+          "all/no_overlap": {
+            "n": 317,
+            "k": 9,
+            "top1": 0.9116719242902208,
+            "top1_strict": 0.8927444794952681,
+            "mrr": 0.936670672475089,
+            "mrr_tie": 0.9272566375090033,
+            "tie_rate": 0.0077111812127585,
+            "margin": 0.41070929891346825,
+            "delta_vs_A3": {
+              "delta": 0.21766561514195581,
+              "ci_low": 0.1608832807570978,
+              "ci_high": 0.27129337539432175
+            }
+          }
+        }
+      }
+    ]
+  },
+  "controls": {
+    "label_shuffle_L9": {
+      "n": 250,
+      "k": 9,
+      "top1": 0.12,
+      "top1_strict": 0.12,
+      "mrr": 0.30071428571428577,
+      "mrr_tie": 0.30071428571428577,
+      "tie_rate": 0.0,
+      "margin": -3.368454090360984
+    }
+  },
+  "notes": [
+    "Grouped split hashes the sorted bridge-word set; exact bridge-word sets are disjoint between train and test. Token-level overlap is reported because different bridge-word sets can still share tokens. Random split is a secondary stability check; all 2,154 bridge-word sets are unique, so it is not a strong leakage stress test.",
+    "All cases are clean (non-degenerate), weight-band matched, and exclude near-exact duplicate bridges (cos > 0.9999 to the true bridge).",
+    "weight_delta is excluded from all model features. The true bridge is the only candidate with delta exactly 0, so a weight_delta feature is an oracle identifier (L0_weight_identity_oracle); it is retained only as a leakage diagnostic, not as a selector.",
+    "A1 Jaccard is tie-dominated at L9/L7, so strict top-1 and MRR_tie are the relevant columns.",
+    "The vector-only model uses m*b and |m-b|. It does not see words, child vectors, weights, or bridge ids.",
+    "text_geom is the stronger text/geometry re-ranker baseline; text_only isolates word overlap/counts without any vector or child geometry.",
+    "Models are selected on validation cases and refit on train+val; test is evaluated once.",
+    "5/2154 cases had no candidate inside the initial weight band and used the final fallback; weight features are excluded.",
+    "All logistic models selected C=0.001, the lower edge of the grid; a finer regularization sweep is the next cheap check.",
+    "Per-level vector+geom beats pooled L9+L7 on L9 (84.0% vs 81.2%), so pooling is not recommended for the L9 metric.",
+    "Random-vs-grouped differences are small for the vector models (L9 +2 to +3 points), and all 2,154 bridge-word sets are unique: exact-group overlap is 0 and token overlap is ~0.1% in both splits. The random split is therefore a stability check, not a strong leakage stress test. text_geom is more split-sensitive (81.2% grouped vs 87.4% random) and should be treated as less robust.",
+    "Grouped and random test splits share 0 exact bridge-word sets; token overlap is ~0.1% in both, so the random split mainly measures sampling variance.",
+    "no_overlap subset results track all closely: L9 vector-only 80.2% vs 80.4%, L9 vector+geom 83.8% vs 84.0%; full subset metrics are in the JSON.",
+    "text-only HGB is tie-dominated like A1: competition top-1 97.6% but strict top-1 9.2%; it is not a useful selector."
+  ],
+  "stability": {
+    "seed": 43,
+    "rows": [
+      {
+        "level": "9",
+        "model": "A3_m_cosine",
+        "seed42_strict": 0.62,
+        "seed43_strict": 0.6254980079681275,
+        "seed43_n": 251,
+        "seed43_delta": null
+      },
+      {
+        "level": "9",
+        "model": "L9 vector-only logreg",
+        "seed42_strict": 0.804,
+        "seed43_strict": 0.8167330677290837,
+        "seed43_n": 251,
+        "seed43_delta": {
+          "delta": 0.19123505976095623,
+          "ci_low": 0.13147410358565736,
+          "ci_high": 0.2510956175298799
+        }
+      },
+      {
+        "level": "9",
+        "model": "L9 vector+geom logreg",
+        "seed42_strict": 0.84,
+        "seed43_strict": 0.848605577689243,
+        "seed43_n": 251,
+        "seed43_delta": {
+          "delta": 0.22310756972111556,
+          "ci_low": 0.1633466135458168,
+          "ci_high": 0.2828685258964143
+        }
+      },
+      {
+        "level": "7",
+        "model": "A3_m_cosine",
+        "seed42_strict": 0.7415730337078652,
+        "seed43_strict": 0.7611940298507462,
+        "seed43_n": 67,
+        "seed43_delta": null
+      },
+      {
+        "level": "7",
+        "model": "L7 vector-only logreg",
+        "seed42_strict": 0.8314606741573034,
+        "seed43_strict": 0.8656716417910447,
+        "seed43_n": 67,
+        "seed43_delta": {
+          "delta": 0.10447761194029848,
+          "ci_low": 0.014925373134328401,
+          "ci_high": 0.19402985074626866
+        }
+      },
+      {
+        "level": "7",
+        "model": "L7 vector+geom logreg",
+        "seed42_strict": 0.8539325842696629,
+        "seed43_strict": 0.8955223880597015,
+        "seed43_n": 67,
+        "seed43_delta": {
+          "delta": 0.13432835820895528,
+          "ci_low": 0.04477611940298509,
+          "ci_high": 0.23880597014925364
+        }
+      }
+    ],
+    "note": "The second grouped split reproduces the vector-only and vector+geom gains. L9 C remains at the 0.001 grid boundary in both seeds; L7 selects interior C values. A finer L9 regularization sweep is the next cheap check."
+  }
+}

@@ -1,0 +1,581 @@
+{
+  "meta": {
+    "generated_at": "2026-10-21T11:59:32.793637+00:00",
+    "runtime_seconds": 919.2711443901062,
+    "dataset": "evaluation/results/bridge_probe/neg49/dataset.npz",
+    "cases": 1646,
+    "negatives": 49,
+    "levels": [
+      9,
+      7
+    ],
+    "seed": 42,
+    "fallback_band_cases": 2,
+    "grouped_split": {
+      "train": {
+        "cases": 1157,
+        "per_level": {
+          "9": 1157
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "val": {
+        "cases": 239,
+        "per_level": {
+          "9": 239
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0011037527593818985
+      },
+      "test": {
+        "cases": 250,
+        "per_level": {
+          "9": 250
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.001048767697954903
+      }
+    },
+    "random_split": null,
+    "feature_sets": {
+      "cos": "cosine/Jaccard (no weight delta)",
+      "text_only": "Jaccard/overlap/word-count text only",
+      "text_geom": "cosine/Jaccard + overlap/counts (no weight delta)",
+      "vector": "m*b and |m-b| (vector-only learned metric)",
+      "vector_geom": "vector features + cosine/Jaccard",
+      "all": "vector_geom + overlap/counts"
+    }
+  },
+  "grouped": {
+    "baselines": {
+      "grouped/9/all/A0_random": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.016,
+        "top1_strict": 0.016,
+        "mrr": 0.089528892118762,
+        "mrr_tie": 0.089528892118762,
+        "tie_rate": 0.0,
+        "margin": -0.48490012747477873
+      },
+      "grouped/9/no_overlap/A0_random": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.016194331983805668,
+        "top1_strict": 0.016194331983805668,
+        "mrr": 0.08993606195753455,
+        "mrr_tie": 0.08993606195753455,
+        "tie_rate": 0.0,
+        "margin": -0.48284341324675134
+      },
+      "grouped/9/tight/A0_random": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.013513513513513514,
+        "top1_strict": 0.013513513513513514,
+        "mrr": 0.09040201188592674,
+        "mrr_tie": 0.09040201188592674,
+        "tie_rate": 0.0,
+        "margin": -0.45952807221067804
+      },
+      "grouped/9/all/A1_jaccard": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.952,
+        "top1_strict": 0.012,
+        "mrr": 0.9743333333333334,
+        "mrr_tie": 0.050700298180875306,
+        "tie_rate": 0.9867755102040816,
+        "margin": -0.004909140631556511
+      },
+      "grouped/9/no_overlap/A1_jaccard": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.951417004048583,
+        "top1_strict": 0.0,
+        "mrr": 0.9740215924426451,
+        "mrr_tie": 0.039170342288335325,
+        "tie_rate": 0.9987606378583823,
+        "margin": -0.006134267021649279
+      },
+      "grouped/9/tight/A1_jaccard": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.9527027027027027,
+        "top1_strict": 0.02027027027027027,
+        "mrr": 0.9763513513513513,
+        "mrr_tie": 0.058655374831845415,
+        "tie_rate": 0.9787644787644788,
+        "margin": -0.002717524112479107
+      },
+      "grouped/9/all/A2_centroid": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.076,
+        "top1_strict": 0.076,
+        "mrr": 0.14406797718931158,
+        "mrr_tie": 0.14406797718931158,
+        "tie_rate": 0.0,
+        "margin": -0.10684193301200867
+      },
+      "grouped/9/no_overlap/A2_centroid": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.0728744939271255,
+        "top1_strict": 0.0728744939271255,
+        "mrr": 0.14033870835625334,
+        "mrr_tie": 0.14033870835625334,
+        "tie_rate": 0.0,
+        "margin": -0.107834951356355
+      },
+      "grouped/9/tight/A2_centroid": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.0945945945945946,
+        "top1_strict": 0.0945945945945946,
+        "mrr": 0.16896974415989263,
+        "mrr_tie": 0.16896974415989263,
+        "tie_rate": 0.0,
+        "margin": -0.09784374245115228
+      },
+      "grouped/9/all/A3_m_cosine": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.604,
+        "top1_strict": 0.604,
+        "mrr": 0.6712672458793938,
+        "mrr_tie": 0.6712672458793938,
+        "tie_rate": 0.0,
+        "margin": 0.01079446792602539
+      },
+      "grouped/9/no_overlap/A3_m_cosine": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.6032388663967612,
+        "top1_strict": 0.6032388663967612,
+        "mrr": 0.6706483595270519,
+        "mrr_tie": 0.6706483595270519,
+        "tie_rate": 0.0,
+        "margin": 0.010340389452482524
+      },
+      "grouped/9/tight/A3_m_cosine": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.6959459459459459,
+        "top1_strict": 0.6959459459459459,
+        "mrr": 0.7609314793138322,
+        "mrr_tie": 0.7609314793138322,
+        "tie_rate": 0.0,
+        "margin": 0.02633676295344894
+      },
+      "grouped/9/all/L0_weight_identity_oracle": {
+        "n": 250,
+        "k": 49,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.028706301008232914
+      },
+      "grouped/9/no_overlap/L0_weight_identity_oracle": {
+        "n": 247,
+        "k": 49,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.029018203638702382
+      },
+      "grouped/9/tight/L0_weight_identity_oracle": {
+        "n": 148,
+        "k": 49,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0030770016905836274
+      },
+      "grouped/all/all/A0_random": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.016,
+        "top1_strict": 0.016,
+        "mrr": 0.089528892118762,
+        "mrr_tie": 0.089528892118762,
+        "tie_rate": 0.0,
+        "margin": -0.48490012747477873
+      },
+      "grouped/all/no_overlap/A0_random": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.016194331983805668,
+        "top1_strict": 0.016194331983805668,
+        "mrr": 0.08993606195753455,
+        "mrr_tie": 0.08993606195753455,
+        "tie_rate": 0.0,
+        "margin": -0.48284341324675134
+      },
+      "grouped/all/tight/A0_random": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.013513513513513514,
+        "top1_strict": 0.013513513513513514,
+        "mrr": 0.09040201188592674,
+        "mrr_tie": 0.09040201188592674,
+        "tie_rate": 0.0,
+        "margin": -0.45952807221067804
+      },
+      "grouped/all/all/A1_jaccard": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.952,
+        "top1_strict": 0.012,
+        "mrr": 0.9743333333333334,
+        "mrr_tie": 0.050700298180875306,
+        "tie_rate": 0.9867755102040816,
+        "margin": -0.004909140631556511
+      },
+      "grouped/all/no_overlap/A1_jaccard": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.951417004048583,
+        "top1_strict": 0.0,
+        "mrr": 0.9740215924426451,
+        "mrr_tie": 0.039170342288335325,
+        "tie_rate": 0.9987606378583823,
+        "margin": -0.006134267021649279
+      },
+      "grouped/all/tight/A1_jaccard": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.9527027027027027,
+        "top1_strict": 0.02027027027027027,
+        "mrr": 0.9763513513513513,
+        "mrr_tie": 0.058655374831845415,
+        "tie_rate": 0.9787644787644788,
+        "margin": -0.002717524112479107
+      },
+      "grouped/all/all/A2_centroid": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.076,
+        "top1_strict": 0.076,
+        "mrr": 0.14406797718931158,
+        "mrr_tie": 0.14406797718931158,
+        "tie_rate": 0.0,
+        "margin": -0.10684193301200867
+      },
+      "grouped/all/no_overlap/A2_centroid": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.0728744939271255,
+        "top1_strict": 0.0728744939271255,
+        "mrr": 0.14033870835625334,
+        "mrr_tie": 0.14033870835625334,
+        "tie_rate": 0.0,
+        "margin": -0.107834951356355
+      },
+      "grouped/all/tight/A2_centroid": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.0945945945945946,
+        "top1_strict": 0.0945945945945946,
+        "mrr": 0.16896974415989263,
+        "mrr_tie": 0.16896974415989263,
+        "tie_rate": 0.0,
+        "margin": -0.09784374245115228
+      },
+      "grouped/all/all/A3_m_cosine": {
+        "n": 250,
+        "k": 49,
+        "top1": 0.604,
+        "top1_strict": 0.604,
+        "mrr": 0.6712672458793938,
+        "mrr_tie": 0.6712672458793938,
+        "tie_rate": 0.0,
+        "margin": 0.01079446792602539
+      },
+      "grouped/all/no_overlap/A3_m_cosine": {
+        "n": 247,
+        "k": 49,
+        "top1": 0.6032388663967612,
+        "top1_strict": 0.6032388663967612,
+        "mrr": 0.6706483595270519,
+        "mrr_tie": 0.6706483595270519,
+        "tie_rate": 0.0,
+        "margin": 0.010340389452482524
+      },
+      "grouped/all/tight/A3_m_cosine": {
+        "n": 148,
+        "k": 49,
+        "top1": 0.6959459459459459,
+        "top1_strict": 0.6959459459459459,
+        "mrr": 0.7609314793138322,
+        "mrr_tie": 0.7609314793138322,
+        "tie_rate": 0.0,
+        "margin": 0.02633676295344894
+      },
+      "grouped/all/all/L0_weight_identity_oracle": {
+        "n": 250,
+        "k": 49,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.028706301008232914
+      },
+      "grouped/all/no_overlap/L0_weight_identity_oracle": {
+        "n": 247,
+        "k": 49,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.029018203638702382
+      },
+      "grouped/all/tight/L0_weight_identity_oracle": {
+        "n": 148,
+        "k": 49,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0030770016905836274
+      }
+    },
+    "models": [
+      {
+        "label": "L9 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1157,
+        "val_cases": 239,
+        "best_param": {
+          "C": 1e-05
+        },
+        "val": {
+          "n": 239,
+          "k": 49,
+          "top1": 0.7698744769874477,
+          "top1_strict": 0.7698744769874477,
+          "mrr": 0.8395585685144695,
+          "mrr_tie": 0.8395585685144695,
+          "tie_rate": 0.0,
+          "margin": 0.7291464076345545
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 49,
+            "top1": 0.772,
+            "top1_strict": 0.772,
+            "mrr": 0.8283518421179258,
+            "mrr_tie": 0.8283518421179258,
+            "tie_rate": 0.0,
+            "margin": 0.7342886615996396,
+            "delta_vs_A3": {
+              "delta": 0.16800000000000004,
+              "ci_low": 0.11599999999999999,
+              "ci_high": 0.21600000000000008
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 49,
+            "top1": 0.7692307692307693,
+            "top1_strict": 0.7692307692307693,
+            "mrr": 0.8262670466780625,
+            "mrr_tie": 0.8262670466780625,
+            "tie_rate": 0.0,
+            "margin": 0.7244019062445769,
+            "delta_vs_A3": {
+              "delta": 0.1659919028340081,
+              "ci_low": 0.11740890688259109,
+              "ci_high": 0.21862348178137647
+            }
+          },
+          "9/tight": {
+            "n": 148,
+            "k": 49,
+            "top1": 0.831081081081081,
+            "top1_strict": 0.831081081081081,
+            "mrr": 0.8683438287764026,
+            "mrr_tie": 0.8683438287764026,
+            "tie_rate": 0.0,
+            "margin": 0.9402843321186598,
+            "delta_vs_A3": {
+              "delta": 0.1351351351351351,
+              "ci_low": 0.08108108108108103,
+              "ci_high": 0.19594594594594594
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1157,
+        "val_cases": 239,
+        "best_param": {
+          "C": 3e-05
+        },
+        "val": {
+          "n": 239,
+          "k": 49,
+          "top1": 0.7907949790794979,
+          "top1_strict": 0.7907949790794979,
+          "mrr": 0.8561731780960986,
+          "mrr_tie": 0.8561731780960986,
+          "tie_rate": 0.0,
+          "margin": 1.023329291572089
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 49,
+            "top1": 0.796,
+            "top1_strict": 0.796,
+            "mrr": 0.850537970153635,
+            "mrr_tie": 0.850537970153635,
+            "tie_rate": 0.0,
+            "margin": 1.0340955797249858,
+            "delta_vs_A3": {
+              "delta": 0.19200000000000006,
+              "ci_low": 0.136,
+              "ci_high": 0.244
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 49,
+            "top1": 0.7935222672064778,
+            "top1_strict": 0.7935222672064778,
+            "mrr": 0.848722641855906,
+            "mrr_tie": 0.848722641855906,
+            "tie_rate": 0.0,
+            "margin": 1.0237007472223767,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.1417004048582996,
+              "ci_high": 0.24291497975708498
+            }
+          },
+          "9/tight": {
+            "n": 148,
+            "k": 49,
+            "top1": 0.8243243243243243,
+            "top1_strict": 0.8243243243243243,
+            "mrr": 0.8718044452559855,
+            "mrr_tie": 0.8718044452559855,
+            "tie_rate": 0.0,
+            "margin": 1.2693505437763144,
+            "delta_vs_A3": {
+              "delta": 0.1283783783783784,
+              "ci_low": 0.06756756756756754,
+              "ci_high": 0.18918918918918926
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1157,
+        "val_cases": 239,
+        "best_param": {
+          "max_iter": 50
+        },
+        "val": {
+          "n": 239,
+          "k": 49,
+          "top1": 0.8242677824267782,
+          "top1_strict": 0.7907949790794979,
+          "mrr": 0.8581042170424783,
+          "mrr_tie": 0.834515278254417,
+          "tie_rate": 0.013150029886431562,
+          "margin": 0.3411766582919173
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 49,
+            "top1": 0.816,
+            "top1_strict": 0.784,
+            "mrr": 0.8508856947373681,
+            "mrr_tie": 0.8243556996853614,
+            "tie_rate": 0.015755102040816326,
+            "margin": 0.2837824311314899,
+            "delta_vs_A3": {
+              "delta": 0.18000000000000005,
+              "ci_low": 0.11199999999999999,
+              "ci_high": 0.24
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 49,
+            "top1": 0.8137651821862348,
+            "top1_strict": 0.7813765182186235,
+            "mrr": 0.8490745898151498,
+            "mrr_tie": 0.8222223681025925,
+            "tie_rate": 0.01594645955548211,
+            "margin": 0.28308335820527813,
+            "delta_vs_A3": {
+              "delta": 0.17813765182186236,
+              "ci_low": 0.10931174089068829,
+              "ci_high": 0.24291497975708498
+            }
+          },
+          "9/tight": {
+            "n": 148,
+            "k": 49,
+            "top1": 0.8716216216216216,
+            "top1_strict": 0.8581081081081081,
+            "mrr": 0.9024203920173995,
+            "mrr_tie": 0.8933478670164355,
+            "tie_rate": 0.003723110865968009,
+            "margin": 0.3744087266585004,
+            "delta_vs_A3": {
+              "delta": 0.16216216216216217,
+              "ci_low": 0.09459459459459452,
+              "ci_high": 0.2364864864864865
+            }
+          }
+        }
+      }
+    ]
+  },
+  "random": {
+    "baselines": {},
+    "models": []
+  },
+  "controls": {},
+  "notes": [
+    "Grouped split hashes the sorted bridge-word set; exact bridge-word sets are disjoint between train and test. Token-level overlap is reported because different bridge-word sets can still share tokens. Random split is a secondary stability check; bridge-word sets are nearly unique here, so it is not a strong leakage stress test.",
+    "All cases are clean (non-degenerate), weight-band matched, and exclude near-exact duplicate bridges (cos > 0.9999 to the true bridge).",
+    "weight_delta is excluded from all model features. The true bridge is the only candidate with delta exactly 0, so a weight_delta feature is an oracle identifier (L0_weight_identity_oracle); it is retained only as a leakage diagnostic, not as a selector.",
+    "A1 Jaccard is tie-dominated at L9/L7, so strict top-1 and MRR_tie are the relevant columns.",
+    "The vector-only model uses m*b and |m-b|. It does not see words, child vectors, weights, or bridge ids.",
+    "text_geom is the stronger text/geometry re-ranker baseline; text_only isolates word overlap/counts without any vector or child geometry.",
+    "2/1646 cases had no candidate inside the initial weight band and used the final fallback; weight features are excluded.",
+    "Models are selected on validation cases and refit on train+val; test is evaluated once."
+  ]
+}

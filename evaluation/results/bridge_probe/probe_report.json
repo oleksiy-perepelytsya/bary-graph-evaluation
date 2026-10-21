@@ -1,0 +1,2355 @@
+{
+  "meta": {
+    "generated_at": "2026-10-21T11:43:57.257231+00:00",
+    "runtime_seconds": 772.8265151977539,
+    "dataset": "/home/alex/Projects/barygraph-learning/evaluation/results/bridge_probe/dataset.npz",
+    "cases": 2154,
+    "negatives": 9,
+    "levels": [
+      9,
+      7
+    ],
+    "seed": 42,
+    "fallback_band_cases": 5,
+    "grouped_split": {
+      "train": {
+        "cases": 1494,
+        "per_level": {
+          "9": 1158,
+          "7": 336
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "val": {
+        "cases": 321,
+        "per_level": {
+          "9": 239,
+          "7": 82
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0012160518848804217
+      },
+      "test": {
+        "cases": 339,
+        "per_level": {
+          "9": 250,
+          "7": 89
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.001145475372279496
+      }
+    },
+    "random_split": {
+      "train": {
+        "cases": 1508,
+        "per_level": {
+          "9": 1153,
+          "7": 355
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "val": {
+        "cases": 323,
+        "per_level": {
+          "9": 247,
+          "7": 76
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0
+      },
+      "test": {
+        "cases": 323,
+        "per_level": {
+          "9": 247,
+          "7": 76
+        },
+        "bridge_group_overlap_with_train": 0,
+        "bridge_token_overlap_with_train": 0.0008025682182985554
+      }
+    },
+    "feature_sets": {
+      "cos": "cosine/Jaccard (no weight delta)",
+      "text_only": "Jaccard/overlap/word-count text only",
+      "text_geom": "cosine/Jaccard + overlap/counts (no weight delta)",
+      "vector": "m*b and |m-b| (vector-only learned metric)",
+      "vector_geom": "vector features + cosine/Jaccard",
+      "all": "vector_geom + overlap/counts"
+    }
+  },
+  "grouped": {
+    "baselines": {
+      "grouped/9/all/A0_random": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.132,
+        "top1_strict": 0.132,
+        "mrr": 0.3229809523809524,
+        "mrr_tie": 0.3229809523809524,
+        "tie_rate": 0.0,
+        "margin": -0.38439359485781727
+      },
+      "grouped/9/no_overlap/A0_random": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.13360323886639677,
+        "top1_strict": 0.13360323886639677,
+        "mrr": 0.32564423880213356,
+        "mrr_tie": 0.32564423880213356,
+        "tie_rate": 0.0,
+        "margin": -0.3792747549225071
+      },
+      "grouped/9/tight/A0_random": {
+        "n": 180,
+        "k": 9,
+        "top1": 0.12222222222222222,
+        "top1_strict": 0.12222222222222222,
+        "mrr": 0.3107826278659612,
+        "mrr_tie": 0.3107826278659612,
+        "tie_rate": 0.0,
+        "margin": -0.39403560352446126
+      },
+      "grouped/9/all/A1_jaccard": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.968,
+        "top1_strict": 0.012,
+        "mrr": 0.9821333333333334,
+        "mrr_tie": 0.1909668997668998,
+        "tie_rate": 0.9826666666666667,
+        "margin": -0.002815314143896103
+      },
+      "grouped/9/no_overlap/A1_jaccard": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.9676113360323887,
+        "top1_strict": 0.0,
+        "mrr": 0.9819163292847505,
+        "mrr_tie": 0.18114058680860304,
+        "tie_rate": 0.9946018893387315,
+        "margin": -0.004199035948346018
+      },
+      "grouped/9/tight/A1_jaccard": {
+        "n": 180,
+        "k": 9,
+        "top1": 0.9722222222222222,
+        "top1_strict": 0.016666666666666666,
+        "mrr": 0.9861111111111112,
+        "mrr_tie": 0.1950336700336701,
+        "tie_rate": 0.980246913580247,
+        "margin": -0.00038451744864384334
+      },
+      "grouped/9/all/A2_centroid": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.08,
+        "top1_strict": 0.08,
+        "mrr": 0.23194126984126986,
+        "mrr_tie": 0.23194126984126986,
+        "tie_rate": 0.0,
+        "margin": -0.09463244223594666
+      },
+      "grouped/9/no_overlap/A2_centroid": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.07692307692307693,
+        "top1_strict": 0.07692307692307693,
+        "mrr": 0.22895540132382244,
+        "mrr_tie": 0.22895540132382244,
+        "tie_rate": 0.0,
+        "margin": -0.09569315895860495
+      },
+      "grouped/9/tight/A2_centroid": {
+        "n": 180,
+        "k": 9,
+        "top1": 0.1111111111111111,
+        "top1_strict": 0.1111111111111111,
+        "mrr": 0.26691358024691364,
+        "mrr_tie": 0.26691358024691364,
+        "tie_rate": 0.0,
+        "margin": -0.08477379182974497
+      },
+      "grouped/9/all/A3_m_cosine": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.62,
+        "top1_strict": 0.62,
+        "mrr": 0.7080380952380951,
+        "mrr_tie": 0.7080380952380951,
+        "tie_rate": 0.0,
+        "margin": 0.015861764430999757
+      },
+      "grouped/9/no_overlap/A3_m_cosine": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.6194331983805668,
+        "top1_strict": 0.6194331983805668,
+        "mrr": 0.7071910545594755,
+        "mrr_tie": 0.7071910545594755,
+        "tie_rate": 0.0,
+        "margin": 0.015260631256257956
+      },
+      "grouped/9/tight/A3_m_cosine": {
+        "n": 180,
+        "k": 9,
+        "top1": 0.7,
+        "top1_strict": 0.7,
+        "mrr": 0.7775992063492064,
+        "mrr_tie": 0.7775992063492064,
+        "tie_rate": 0.0,
+        "margin": 0.027913156814045378
+      },
+      "grouped/9/all/L0_weight_identity_oracle": {
+        "n": 250,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08722780707236961
+      },
+      "grouped/9/no_overlap/L0_weight_identity_oracle": {
+        "n": 247,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08807231683552341
+      },
+      "grouped/9/tight/L0_weight_identity_oracle": {
+        "n": 180,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.010425423923758595
+      },
+      "grouped/7/all/A0_random": {
+        "n": 89,
+        "k": 9,
+        "top1": 0.10112359550561797,
+        "top1_strict": 0.10112359550561797,
+        "mrr": 0.3059568396647048,
+        "mrr_tie": 0.3059568396647048,
+        "tie_rate": 0.0,
+        "margin": -0.3758241331851132
+      },
+      "grouped/7/no_overlap/A0_random": {
+        "n": 88,
+        "k": 9,
+        "top1": 0.10227272727272728,
+        "top1_strict": 0.10227272727272728,
+        "mrr": 0.3078102453102453,
+        "mrr_tie": 0.3078102453102453,
+        "tie_rate": 0.0,
+        "margin": -0.37579690656789033
+      },
+      "grouped/7/tight/A0_random": {
+        "n": 70,
+        "k": 9,
+        "top1": 0.12857142857142856,
+        "top1_strict": 0.12857142857142856,
+        "mrr": 0.3295464852607709,
+        "mrr_tie": 0.3295464852607709,
+        "tie_rate": 0.0,
+        "margin": -0.3541527394372313
+      },
+      "grouped/7/all/A1_jaccard": {
+        "n": 89,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.011235955056179775,
+        "mrr": 1.0,
+        "mrr_tie": 0.19101123595505623,
+        "tie_rate": 0.9887640449438202,
+        "margin": 0.0010214504900943027
+      },
+      "grouped/7/no_overlap/A1_jaccard": {
+        "n": 88,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818185,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "grouped/7/tight/A1_jaccard": {
+        "n": 70,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818182,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "grouped/7/all/A2_centroid": {
+        "n": 89,
+        "k": 9,
+        "top1": 0.0898876404494382,
+        "top1_strict": 0.0898876404494382,
+        "mrr": 0.25088728375245234,
+        "mrr_tie": 0.25088728375245234,
+        "tie_rate": 0.0,
+        "margin": -0.0833889480387227
+      },
+      "grouped/7/no_overlap/A2_centroid": {
+        "n": 88,
+        "k": 9,
+        "top1": 0.07954545454545454,
+        "top1_strict": 0.07954545454545454,
+        "mrr": 0.24237463924963928,
+        "mrr_tie": 0.24237463924963928,
+        "tie_rate": 0.0,
+        "margin": -0.08554305407133969
+      },
+      "grouped/7/tight/A2_centroid": {
+        "n": 70,
+        "k": 9,
+        "top1": 0.08571428571428572,
+        "top1_strict": 0.08571428571428572,
+        "mrr": 0.24869047619047632,
+        "mrr_tie": 0.24869047619047632,
+        "tie_rate": 0.0,
+        "margin": -0.08457773412976946
+      },
+      "grouped/7/all/A3_m_cosine": {
+        "n": 89,
+        "k": 9,
+        "top1": 0.7415730337078652,
+        "top1_strict": 0.7415730337078652,
+        "mrr": 0.7928036383092562,
+        "mrr_tie": 0.7928036383092562,
+        "tie_rate": 0.0,
+        "margin": 0.03416856955946161
+      },
+      "grouped/7/no_overlap/A3_m_cosine": {
+        "n": 88,
+        "k": 9,
+        "top1": 0.7386363636363636,
+        "top1_strict": 0.7386363636363636,
+        "mrr": 0.7904491341991342,
+        "mrr_tie": 0.7904491341991342,
+        "tie_rate": 0.0,
+        "margin": 0.03327874161980369
+      },
+      "grouped/7/tight/A3_m_cosine": {
+        "n": 70,
+        "k": 9,
+        "top1": 0.8,
+        "top1_strict": 0.8,
+        "mrr": 0.8444217687074831,
+        "mrr_tie": 0.8444217687074831,
+        "tie_rate": 0.0,
+        "margin": 0.044662761688232425
+      },
+      "grouped/7/all/L0_weight_identity_oracle": {
+        "n": 89,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.05006732444862913
+      },
+      "grouped/7/no_overlap/L0_weight_identity_oracle": {
+        "n": 88,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.050042814369695515
+      },
+      "grouped/7/tight/L0_weight_identity_oracle": {
+        "n": 70,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.00732890414856513
+      },
+      "grouped/all/all/A0_random": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.12389380530973451,
+        "top1_strict": 0.12389380530973451,
+        "mrr": 0.3185114950601677,
+        "mrr_tie": 0.3185114950601677,
+        "tie_rate": 0.0,
+        "margin": -0.38214379518563246
+      },
+      "grouped/all/no_overlap/A0_random": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.1253731343283582,
+        "top1_strict": 0.1253731343283582,
+        "mrr": 0.3209594882729211,
+        "mrr_tie": 0.3209594882729211,
+        "tie_rate": 0.0,
+        "margin": -0.3783611708771152
+      },
+      "grouped/all/tight/A0_random": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.124,
+        "top1_strict": 0.124,
+        "mrr": 0.31603650793650795,
+        "mrr_tie": 0.31603650793650795,
+        "tie_rate": 0.0,
+        "margin": -0.3828684015800369
+      },
+      "grouped/all/all/A1_jaccard": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.976401179941003,
+        "top1_strict": 0.011799410029498525,
+        "mrr": 0.9868239921337265,
+        "mrr_tie": 0.19097853965110606,
+        "tie_rate": 0.9842674532940019,
+        "margin": -0.0018080219538514242
+      },
+      "grouped/all/no_overlap/A1_jaccard": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.9761194029850746,
+        "top1_strict": 0.0,
+        "mrr": 0.9866666666666666,
+        "mrr_tie": 0.1813185819155969,
+        "tie_rate": 0.9960199004975125,
+        "margin": -0.0030960056096760195
+      },
+      "grouped/all/tight/A1_jaccard": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.98,
+        "top1_strict": 0.012,
+        "mrr": 0.99,
+        "mrr_tie": 0.19133333333333336,
+        "tie_rate": 0.9857777777777779,
+        "margin": -0.0002768525630235672
+      },
+      "grouped/all/all/A2_centroid": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.08259587020648967,
+        "top1_strict": 0.08259587020648967,
+        "mrr": 0.23691529709228826,
+        "mrr_tie": 0.23691529709228826,
+        "tie_rate": 0.0,
+        "margin": -0.09168061042605599
+      },
+      "grouped/all/no_overlap/A2_centroid": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.07761194029850746,
+        "top1_strict": 0.07761194029850746,
+        "mrr": 0.23248045486851465,
+        "mrr_tie": 0.23248045486851465,
+        "tie_rate": 0.0,
+        "margin": -0.09302686274941288
+      },
+      "grouped/all/tight/A2_centroid": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.104,
+        "top1_strict": 0.104,
+        "mrr": 0.2618111111111111,
+        "mrr_tie": 0.2618111111111111,
+        "tie_rate": 0.0,
+        "margin": -0.08471889567375183
+      },
+      "grouped/all/all/A3_m_cosine": {
+        "n": 339,
+        "k": 9,
+        "top1": 0.6519174041297935,
+        "top1_strict": 0.6519174041297935,
+        "mrr": 0.730292175867397,
+        "mrr_tie": 0.730292175867397,
+        "tie_rate": 0.0,
+        "margin": 0.02066797580690862
+      },
+      "grouped/all/no_overlap/A3_m_cosine": {
+        "n": 335,
+        "k": 9,
+        "top1": 0.6507462686567164,
+        "top1_strict": 0.6507462686567164,
+        "mrr": 0.7290618336886993,
+        "mrr_tie": 0.7290618336886993,
+        "tie_rate": 0.0,
+        "margin": 0.019993746814443103
+      },
+      "grouped/all/tight/A3_m_cosine": {
+        "n": 250,
+        "k": 9,
+        "top1": 0.728,
+        "top1_strict": 0.728,
+        "mrr": 0.7963095238095238,
+        "mrr_tie": 0.7963095238095238,
+        "tie_rate": 0.0,
+        "margin": 0.03260304617881775
+      },
+      "grouped/all/all/L0_weight_identity_oracle": {
+        "n": 339,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0774718101593522
+      },
+      "grouped/all/no_overlap/L0_weight_identity_oracle": {
+        "n": 335,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0780824773818134
+      },
+      "grouped/all/tight/L0_weight_identity_oracle": {
+        "n": 250,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.009558398386704425
+      }
+    },
+    "models": [
+      {
+        "label": "L9 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "C": 0.0001
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.8326359832635983,
+          "top1_strict": 0.8326359832635983,
+          "mrr": 0.894326559075513,
+          "mrr_tie": 0.894326559075513,
+          "tie_rate": 0.0,
+          "margin": 1.1385955444664837
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.824,
+            "top1_strict": 0.824,
+            "mrr": 0.8808920634920635,
+            "mrr_tie": 0.8808920634920635,
+            "tie_rate": 0.0,
+            "margin": 1.0855491288464076,
+            "delta_vs_A3": {
+              "delta": 0.20399999999999996,
+              "ci_low": 0.1479999999999999,
+              "ci_high": 0.264
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8218623481781376,
+            "top1_strict": 0.8218623481781376,
+            "mrr": 0.8794454083927767,
+            "mrr_tie": 0.8794454083927767,
+            "tie_rate": 0.0,
+            "margin": 1.0696744832369458,
+            "delta_vs_A3": {
+              "delta": 0.20242914979757087,
+              "ci_low": 0.1497975708502024,
+              "ci_high": 0.2591093117408907
+            }
+          },
+          "9/tight": {
+            "n": 180,
+            "k": 9,
+            "top1": 0.8222222222222222,
+            "top1_strict": 0.8222222222222222,
+            "mrr": 0.8812786596119928,
+            "mrr_tie": 0.8812786596119928,
+            "tie_rate": 0.0,
+            "margin": 1.1711164816169806,
+            "delta_vs_A3": {
+              "delta": 0.12222222222222223,
+              "ci_low": 0.06652777777777777,
+              "ci_high": 0.1777777777777777
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "C": 0.0003
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.8702928870292888,
+          "top1_strict": 0.8702928870292888,
+          "mrr": 0.9185943415022912,
+          "mrr_tie": 0.9185943415022912,
+          "tie_rate": 0.0,
+          "margin": 1.6426506766601243
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.848,
+            "top1_strict": 0.848,
+            "mrr": 0.8991555555555556,
+            "mrr_tie": 0.8991555555555556,
+            "tie_rate": 0.0,
+            "margin": 1.599778865806791,
+            "delta_vs_A3": {
+              "delta": 0.22799999999999998,
+              "ci_low": 0.17199999999999993,
+              "ci_high": 0.28800000000000003
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8461538461538461,
+            "top1_strict": 0.8461538461538461,
+            "mrr": 0.8979307242465138,
+            "mrr_tie": 0.8979307242465138,
+            "tie_rate": 0.0,
+            "margin": 1.5859392265833976,
+            "delta_vs_A3": {
+              "delta": 0.22672064777327938,
+              "ci_low": 0.17004048582995956,
+              "ci_high": 0.2834008097165992
+            }
+          },
+          "9/tight": {
+            "n": 180,
+            "k": 9,
+            "top1": 0.8388888888888889,
+            "top1_strict": 0.8388888888888889,
+            "mrr": 0.8964197530864197,
+            "mrr_tie": 0.8964197530864197,
+            "tie_rate": 0.0,
+            "margin": 1.6874690168016842,
+            "delta_vs_A3": {
+              "delta": 0.13888888888888895,
+              "ci_low": 0.08333333333333326,
+              "ci_high": 0.19444444444444442
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text-only HGB",
+        "features": "text_only",
+        "feature_description": "Jaccard/overlap/word-count text only",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "max_iter": 50
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.9832635983263598,
+          "top1_strict": 0.08786610878661087,
+          "mrr": 0.9916317991631799,
+          "mrr_tie": 0.3840282683378917,
+          "tie_rate": 0.509530450953045,
+          "margin": 0.024832844927548066
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.976,
+            "top1_strict": 0.092,
+            "mrr": 0.988,
+            "mrr_tie": 0.36610072150072154,
+            "tie_rate": 0.5555555555555555,
+            "margin": 0.02329644051898729,
+            "delta_vs_A3": {
+              "delta": -0.528,
+              "ci_low": -0.5960000000000001,
+              "ci_high": -0.45599999999999996
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.9757085020242915,
+            "top1_strict": 0.08097165991902834,
+            "mrr": 0.9878542510121457,
+            "mrr_tie": 0.3584015399804874,
+            "tie_rate": 0.5623031938821413,
+            "margin": 0.021358908524001016,
+            "delta_vs_A3": {
+              "delta": -0.5384615384615384,
+              "ci_low": -0.6033400809716599,
+              "ci_high": -0.46558704453441296
+            }
+          },
+          "9/tight": {
+            "n": 180,
+            "k": 9,
+            "top1": 0.9777777777777777,
+            "top1_strict": 0.1,
+            "mrr": 0.9888888888888889,
+            "mrr_tie": 0.37742424242424244,
+            "tie_rate": 0.532716049382716,
+            "margin": 0.027040076768023724,
+            "delta_vs_A3": {
+              "delta": -0.6,
+              "ci_low": -0.6777777777777778,
+              "ci_high": -0.5222222222222223
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1158,
+        "val_cases": 239,
+        "best_param": {
+          "max_iter": 200
+        },
+        "val": {
+          "n": 239,
+          "k": 9,
+          "top1": 0.8619246861924686,
+          "top1_strict": 0.8619246861924686,
+          "mrr": 0.9013814172809989,
+          "mrr_tie": 0.9011722122600784,
+          "tie_rate": 0.0009298000929800093,
+          "margin": 0.3927038649385804
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.812,
+            "top1_strict": 0.812,
+            "mrr": 0.8608619047619047,
+            "mrr_tie": 0.8608619047619047,
+            "tie_rate": 0.0,
+            "margin": 0.3246425558352738,
+            "delta_vs_A3": {
+              "delta": 0.19200000000000006,
+              "ci_low": 0.124,
+              "ci_high": 0.264
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8097165991902834,
+            "top1_strict": 0.8097165991902834,
+            "mrr": 0.8591719683824947,
+            "mrr_tie": 0.8591719683824947,
+            "tie_rate": 0.0,
+            "margin": 0.3204633134928555,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.11740890688259109,
+              "ci_high": 0.26315789473684204
+            }
+          },
+          "9/tight": {
+            "n": 180,
+            "k": 9,
+            "top1": 0.8833333333333333,
+            "top1_strict": 0.8833333333333333,
+            "mrr": 0.917281746031746,
+            "mrr_tie": 0.917281746031746,
+            "tie_rate": 0.0,
+            "margin": 0.4101875739942728,
+            "delta_vs_A3": {
+              "delta": 0.18333333333333335,
+              "ci_low": 0.10555555555555551,
+              "ci_high": 0.25555555555555554
+            }
+          }
+        }
+      },
+      {
+        "label": "L7 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "7",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 336,
+        "val_cases": 82,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 82,
+          "k": 9,
+          "top1": 0.8414634146341463,
+          "top1_strict": 0.8414634146341463,
+          "mrr": 0.8738821138211382,
+          "mrr_tie": 0.8738821138211382,
+          "tie_rate": 0.0,
+          "margin": 2.9082673026597927
+        },
+        "test": {
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8314606741573034,
+            "top1_strict": 0.8314606741573034,
+            "mrr": 0.866318887105404,
+            "mrr_tie": 0.866318887105404,
+            "tie_rate": 0.0,
+            "margin": 2.819874180397255,
+            "delta_vs_A3": {
+              "delta": 0.0898876404494382,
+              "ci_low": 0.022471910112359605,
+              "ci_high": 0.1573033707865169
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8295454545454546,
+            "top1_strict": 0.8295454545454546,
+            "mrr": 0.8647997835497834,
+            "mrr_tie": 0.8647997835497834,
+            "tie_rate": 0.0,
+            "margin": 2.802521937571701,
+            "delta_vs_A3": {
+              "delta": 0.09090909090909094,
+              "ci_low": 0.022727272727272707,
+              "ci_high": 0.15909090909090906
+            }
+          },
+          "7/tight": {
+            "n": 70,
+            "k": 9,
+            "top1": 0.8857142857142857,
+            "top1_strict": 0.8857142857142857,
+            "mrr": 0.9099149659863947,
+            "mrr_tie": 0.9099149659863947,
+            "tie_rate": 0.0,
+            "margin": 3.1274467271045636,
+            "delta_vs_A3": {
+              "delta": 0.08571428571428563,
+              "ci_low": 0.014285714285714235,
+              "ci_high": 0.15714285714285725
+            }
+          }
+        }
+      },
+      {
+        "label": "L7 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "7",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 336,
+        "val_cases": 82,
+        "best_param": {
+          "C": 0.001
+        },
+        "val": {
+          "n": 82,
+          "k": 9,
+          "top1": 0.8414634146341463,
+          "top1_strict": 0.8414634146341463,
+          "mrr": 0.8741192411924119,
+          "mrr_tie": 0.8741192411924119,
+          "tie_rate": 0.0,
+          "margin": 3.1829137077121965
+        },
+        "test": {
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8539325842696629,
+            "top1_strict": 0.8539325842696629,
+            "mrr": 0.8903201355448546,
+            "mrr_tie": 0.8903201355448546,
+            "tie_rate": 0.0,
+            "margin": 3.101203965606512,
+            "delta_vs_A3": {
+              "delta": 0.1123595505617977,
+              "ci_low": 0.0449438202247191,
+              "ci_high": 0.1910112359550562
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8522727272727273,
+            "top1_strict": 0.8522727272727273,
+            "mrr": 0.8890737734487734,
+            "mrr_tie": 0.8890737734487734,
+            "tie_rate": 0.0,
+            "margin": 3.0874298595938843,
+            "delta_vs_A3": {
+              "delta": 0.11363636363636365,
+              "ci_low": 0.045454545454545414,
+              "ci_high": 0.19318181818181812
+            }
+          },
+          "7/tight": {
+            "n": 70,
+            "k": 9,
+            "top1": 0.9,
+            "top1_strict": 0.9,
+            "mrr": 0.9199376417233562,
+            "mrr_tie": 0.9199376417233562,
+            "tie_rate": 0.0,
+            "margin": 3.436725778897235,
+            "delta_vs_A3": {
+              "delta": 0.09999999999999998,
+              "ci_low": 0.02857142857142858,
+              "ci_high": 0.18571428571428572
+            }
+          }
+        }
+      },
+      {
+        "label": "L7 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "7",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 336,
+        "val_cases": 82,
+        "best_param": {
+          "max_iter": 200
+        },
+        "val": {
+          "n": 82,
+          "k": 9,
+          "top1": 0.8902439024390244,
+          "top1_strict": 0.8902439024390244,
+          "mrr": 0.9206445993031358,
+          "mrr_tie": 0.9204228698131136,
+          "tie_rate": 0.0013550135501355014,
+          "margin": 0.5607476005012675
+        },
+        "test": {
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8089887640449438,
+            "top1_strict": 0.8089887640449438,
+            "mrr": 0.8712680577849118,
+            "mrr_tie": 0.8712680577849118,
+            "tie_rate": 0.0,
+            "margin": 0.5461859794280294,
+            "delta_vs_A3": {
+              "delta": 0.0674157303370786,
+              "ci_low": -0.011235955056179692,
+              "ci_high": 0.1460674157303371
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8068181818181818,
+            "top1_strict": 0.8068181818181818,
+            "mrr": 0.8698051948051948,
+            "mrr_tie": 0.8698051948051948,
+            "tie_rate": 0.0,
+            "margin": 0.5432216526168571,
+            "delta_vs_A3": {
+              "delta": 0.06818181818181812,
+              "ci_low": -0.011363636363636354,
+              "ci_high": 0.14772727272727282
+            }
+          },
+          "7/tight": {
+            "n": 70,
+            "k": 9,
+            "top1": 0.8571428571428571,
+            "top1_strict": 0.8571428571428571,
+            "mrr": 0.9039455782312925,
+            "mrr_tie": 0.9039455782312925,
+            "tie_rate": 0.0,
+            "margin": 0.6160316843298516,
+            "delta_vs_A3": {
+              "delta": 0.05714285714285705,
+              "ci_low": -0.02857142857142858,
+              "ci_high": 0.1428571428571429
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "combined",
+        "model_type": "logreg",
+        "include_level": true,
+        "train_cases": 1494,
+        "val_cases": 321,
+        "best_param": {
+          "C": 0.0003
+        },
+        "val": {
+          "n": 321,
+          "k": 9,
+          "top1": 0.8504672897196262,
+          "top1_strict": 0.8504672897196262,
+          "mrr": 0.9003671562082776,
+          "mrr_tie": 0.9003671562082776,
+          "tie_rate": 0.0,
+          "margin": 1.9076702965029688
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.836,
+            "top1_strict": 0.836,
+            "mrr": 0.895215873015873,
+            "mrr_tie": 0.895215873015873,
+            "tie_rate": 0.0,
+            "margin": 1.6875570952104217,
+            "delta_vs_A3": {
+              "delta": 0.21599999999999997,
+              "ci_low": 0.15999999999999992,
+              "ci_high": 0.276
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8340080971659919,
+            "top1_strict": 0.8340080971659919,
+            "mrr": 0.8939431913116124,
+            "mrr_tie": 0.8939431913116124,
+            "tie_rate": 0.0,
+            "margin": 1.6754909499854949,
+            "delta_vs_A3": {
+              "delta": 0.21457489878542513,
+              "ci_low": 0.16194331983805665,
+              "ci_high": 0.27125506072874495
+            }
+          },
+          "9/tight": {
+            "n": 180,
+            "k": 9,
+            "top1": 0.8333333333333334,
+            "top1_strict": 0.8333333333333334,
+            "mrr": 0.8960405643738977,
+            "mrr_tie": 0.8960405643738977,
+            "tie_rate": 0.0,
+            "margin": 1.7711486217668924,
+            "delta_vs_A3": {
+              "delta": 0.13333333333333341,
+              "ci_low": 0.07763888888888884,
+              "ci_high": 0.18888888888888888
+            }
+          },
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8314606741573034,
+            "top1_strict": 0.8314606741573034,
+            "mrr": 0.8797752808988764,
+            "mrr_tie": 0.8797752808988764,
+            "tie_rate": 0.0,
+            "margin": 2.2919556321567227,
+            "delta_vs_A3": {
+              "delta": 0.0898876404494382,
+              "ci_low": 0.022471910112359605,
+              "ci_high": 0.1573033707865169
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8295454545454546,
+            "top1_strict": 0.8295454545454546,
+            "mrr": 0.8784090909090909,
+            "mrr_tie": 0.8784090909090909,
+            "tie_rate": 0.0,
+            "margin": 2.2806984629627665,
+            "delta_vs_A3": {
+              "delta": 0.09090909090909094,
+              "ci_low": 0.022727272727272707,
+              "ci_high": 0.15909090909090906
+            }
+          },
+          "7/tight": {
+            "n": 70,
+            "k": 9,
+            "top1": 0.8714285714285714,
+            "top1_strict": 0.8714285714285714,
+            "mrr": 0.9069047619047619,
+            "mrr_tie": 0.9069047619047619,
+            "tie_rate": 0.0,
+            "margin": 2.516542712048698,
+            "delta_vs_A3": {
+              "delta": 0.0714285714285714,
+              "ci_low": 0.0,
+              "ci_high": 0.1428571428571429
+            }
+          },
+          "all/all": {
+            "n": 339,
+            "k": 9,
+            "top1": 0.8348082595870207,
+            "top1_strict": 0.8348082595870207,
+            "mrr": 0.8911621482417942,
+            "mrr_tie": 0.8911621482417942,
+            "tie_rate": 0.0,
+            "margin": 1.8462339972405712,
+            "delta_vs_A3": {
+              "delta": 0.18289085545722716,
+              "ci_low": 0.13864306784660763,
+              "ci_high": 0.23008849557522126
+            }
+          },
+          "all/no_overlap": {
+            "n": 335,
+            "k": 9,
+            "top1": 0.8328358208955224,
+            "top1_strict": 0.8328358208955224,
+            "mrr": 0.8898625918028902,
+            "mrr_tie": 0.8898625918028902,
+            "tie_rate": 0.0,
+            "margin": 1.8344708339914646,
+            "delta_vs_A3": {
+              "delta": 0.18208955223880607,
+              "ci_low": 0.13731343283582087,
+              "ci_high": 0.22985074626865676
+            }
+          },
+          "all/tight": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.844,
+            "top1_strict": 0.844,
+            "mrr": 0.8990825396825397,
+            "mrr_tie": 0.8990825396825397,
+            "tie_rate": 0.0,
+            "margin": 1.9798589670457978,
+            "delta_vs_A3": {
+              "delta": 0.11599999999999999,
+              "ci_low": 0.07189999999999996,
+              "ci_high": 0.16400000000000003
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "combined",
+        "model_type": "hgb",
+        "include_level": true,
+        "train_cases": 1494,
+        "val_cases": 321,
+        "best_param": {
+          "max_iter": 200
+        },
+        "val": {
+          "n": 321,
+          "k": 9,
+          "top1": 0.8566978193146417,
+          "top1_strict": 0.8535825545171339,
+          "mrr": 0.9041796469366563,
+          "mrr_tie": 0.9029748116196714,
+          "tie_rate": 0.0013845621322256835,
+          "margin": 0.4473622060253172
+        },
+        "test": {
+          "9/all": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.808,
+            "top1_strict": 0.808,
+            "mrr": 0.8604492063492064,
+            "mrr_tie": 0.8603539682539684,
+            "tie_rate": 0.0008888888888888888,
+            "margin": 0.32607746095304957,
+            "delta_vs_A3": {
+              "delta": 0.18800000000000006,
+              "ci_low": 0.11599999999999999,
+              "ci_high": 0.26009999999999944
+            }
+          },
+          "9/no_overlap": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.805668016194332,
+            "top1_strict": 0.805668016194332,
+            "mrr": 0.8587542574384679,
+            "mrr_tie": 0.858657862605231,
+            "tie_rate": 0.0008996851102114259,
+            "margin": 0.32159494579029574,
+            "delta_vs_A3": {
+              "delta": 0.18623481781376527,
+              "ci_low": 0.10931174089068829,
+              "ci_high": 0.2591093117408907
+            }
+          },
+          "9/tight": {
+            "n": 180,
+            "k": 9,
+            "top1": 0.8777777777777778,
+            "top1_strict": 0.8777777777777778,
+            "mrr": 0.9100220458553793,
+            "mrr_tie": 0.9100220458553793,
+            "tie_rate": 0.0,
+            "margin": 0.4105374537225027,
+            "delta_vs_A3": {
+              "delta": 0.1777777777777778,
+              "ci_low": 0.09999999999999998,
+              "ci_high": 0.25555555555555554
+            }
+          },
+          "7/all": {
+            "n": 89,
+            "k": 9,
+            "top1": 0.8539325842696629,
+            "top1_strict": 0.8539325842696629,
+            "mrr": 0.8977973961120029,
+            "mrr_tie": 0.8977316887724931,
+            "tie_rate": 0.0012484394506866417,
+            "margin": 0.5588742954450834,
+            "delta_vs_A3": {
+              "delta": 0.1123595505617977,
+              "ci_low": 0.0337078651685393,
+              "ci_high": 0.2022471910112359
+            }
+          },
+          "7/no_overlap": {
+            "n": 88,
+            "k": 9,
+            "top1": 0.8522727272727273,
+            "top1_strict": 0.8522727272727273,
+            "mrr": 0.896636002886003,
+            "mrr_tie": 0.8965695488721805,
+            "tie_rate": 0.0012626262626262625,
+            "margin": 0.5582750525533187,
+            "delta_vs_A3": {
+              "delta": 0.11363636363636365,
+              "ci_low": 0.03409090909090906,
+              "ci_high": 0.20454545454545447
+            }
+          },
+          "7/tight": {
+            "n": 70,
+            "k": 9,
+            "top1": 0.8857142857142857,
+            "top1_strict": 0.8857142857142857,
+            "mrr": 0.9157709750566893,
+            "mrr_tie": 0.9156874328678839,
+            "tie_rate": 0.0015873015873015873,
+            "margin": 0.622578827997596,
+            "delta_vs_A3": {
+              "delta": 0.08571428571428563,
+              "ci_low": 0.0,
+              "ci_high": 0.17142857142857149
+            }
+          },
+          "all/all": {
+            "n": 339,
+            "k": 9,
+            "top1": 0.8200589970501475,
+            "top1_strict": 0.8200589970501475,
+            "mrr": 0.8702544833075806,
+            "mrr_tie": 0.8701669981246133,
+            "tie_rate": 0.000983284169124877,
+            "margin": 0.38719521396128265,
+            "delta_vs_A3": {
+              "delta": 0.16814159292035402,
+              "ci_low": 0.10914454277286134,
+              "ci_high": 0.2271386430678466
+            }
+          },
+          "all/no_overlap": {
+            "n": 335,
+            "k": 9,
+            "top1": 0.817910447761194,
+            "top1_strict": 0.817910447761194,
+            "mrr": 0.8687052831082681,
+            "mrr_tie": 0.8686167533261012,
+            "tie_rate": 0.0009950248756218905,
+            "margin": 0.3837676305519256,
+            "delta_vs_A3": {
+              "delta": 0.16716417910447767,
+              "ci_low": 0.11037313432835813,
+              "ci_high": 0.22686567164179106
+            }
+          },
+          "all/tight": {
+            "n": 250,
+            "k": 9,
+            "top1": 0.88,
+            "top1_strict": 0.88,
+            "mrr": 0.9116317460317459,
+            "mrr_tie": 0.9116083542188804,
+            "tie_rate": 0.0004444444444444444,
+            "margin": 0.46990903851952887,
+            "delta_vs_A3": {
+              "delta": 0.15200000000000002,
+              "ci_low": 0.09199999999999997,
+              "ci_high": 0.21599999999999997
+            }
+          }
+        }
+      }
+    ]
+  },
+  "random": {
+    "baselines": {
+      "random/9/all/A0_random": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.08097165991902834,
+        "top1_strict": 0.08097165991902834,
+        "mrr": 0.27886864597390915,
+        "mrr_tie": 0.27886864597390915,
+        "tie_rate": 0.0,
+        "margin": -0.41776843364345295
+      },
+      "random/9/no_overlap/A0_random": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.07883817427385892,
+        "top1_strict": 0.07883817427385892,
+        "mrr": 0.27898307317394455,
+        "mrr_tie": 0.27898307317394455,
+        "tie_rate": 0.0,
+        "margin": -0.41375339774077324
+      },
+      "random/9/tight/A0_random": {
+        "n": 189,
+        "k": 9,
+        "top1": 0.07407407407407407,
+        "top1_strict": 0.07407407407407407,
+        "mrr": 0.2744079113126732,
+        "mrr_tie": 0.2744079113126732,
+        "tie_rate": 0.0,
+        "margin": -0.4151644593915022
+      },
+      "random/9/all/A1_jaccard": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.9676113360323887,
+        "top1_strict": 0.024291497975708502,
+        "mrr": 0.9838056680161943,
+        "mrr_tie": 0.2012023064654644,
+        "tie_rate": 0.9721097615834458,
+        "margin": -0.0016833369427846994
+      },
+      "random/9/no_overlap/A1_jaccard": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.966804979253112,
+        "top1_strict": 0.0,
+        "mrr": 0.983402489626556,
+        "mrr_tie": 0.1813152269583805,
+        "tie_rate": 0.9963116643614569,
+        "margin": -0.0039055726927593043
+      },
+      "random/9/tight/A1_jaccard": {
+        "n": 189,
+        "k": 9,
+        "top1": 0.9629629629629629,
+        "top1_strict": 0.031746031746031744,
+        "mrr": 0.9814814814814815,
+        "mrr_tie": 0.20723104056437391,
+        "tie_rate": 0.9641387419165197,
+        "margin": -0.0019698728211026972
+      },
+      "random/9/all/A2_centroid": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.11336032388663968,
+        "top1_strict": 0.11336032388663968,
+        "mrr": 0.2570191504402031,
+        "mrr_tie": 0.2570191504402031,
+        "tie_rate": 0.0,
+        "margin": -0.09082231323728678
+      },
+      "random/9/no_overlap/A2_centroid": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.1078838174273859,
+        "top1_strict": 0.1078838174273859,
+        "mrr": 0.25166139761575446,
+        "mrr_tie": 0.25166139761575446,
+        "tie_rate": 0.0,
+        "margin": -0.09259426148600598
+      },
+      "random/9/tight/A2_centroid": {
+        "n": 189,
+        "k": 9,
+        "top1": 0.12698412698412698,
+        "top1_strict": 0.12698412698412698,
+        "mrr": 0.2790480389686739,
+        "mrr_tie": 0.2790480389686739,
+        "tie_rate": 0.0,
+        "margin": -0.08686714844098167
+      },
+      "random/9/all/A3_m_cosine": {
+        "n": 247,
+        "k": 9,
+        "top1": 0.6680161943319838,
+        "top1_strict": 0.6680161943319838,
+        "mrr": 0.7405677655677654,
+        "mrr_tie": 0.7405677655677654,
+        "tie_rate": 0.0,
+        "margin": 0.023728879839785187
+      },
+      "random/9/no_overlap/A3_m_cosine": {
+        "n": 241,
+        "k": 9,
+        "top1": 0.6639004149377593,
+        "top1_strict": 0.6639004149377593,
+        "mrr": 0.7361835605611537,
+        "mrr_tie": 0.7361835605611537,
+        "tie_rate": 0.0,
+        "margin": 0.022644744374445365
+      },
+      "random/9/tight/A3_m_cosine": {
+        "n": 189,
+        "k": 9,
+        "top1": 0.7301587301587301,
+        "top1_strict": 0.7301587301587301,
+        "mrr": 0.7971466364323507,
+        "mrr_tie": 0.7971466364323507,
+        "tie_rate": 0.0,
+        "margin": 0.03469301058501793
+      },
+      "random/9/all/L0_weight_identity_oracle": {
+        "n": 247,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08791479311594415
+      },
+      "random/9/no_overlap/L0_weight_identity_oracle": {
+        "n": 241,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08992052251913007
+      },
+      "random/9/tight/L0_weight_identity_oracle": {
+        "n": 189,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.010567463157510955
+      },
+      "random/7/all/A0_random": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.11842105263157894,
+        "top1_strict": 0.11842105263157894,
+        "mrr": 0.30692355889724304,
+        "mrr_tie": 0.30692355889724304,
+        "tie_rate": 0.0,
+        "margin": -0.3645689979042157
+      },
+      "random/7/no_overlap/A0_random": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.11842105263157894,
+        "top1_strict": 0.11842105263157894,
+        "mrr": 0.30692355889724304,
+        "mrr_tie": 0.30692355889724304,
+        "tie_rate": 0.0,
+        "margin": -0.3645689979042157
+      },
+      "random/7/tight/A0_random": {
+        "n": 53,
+        "k": 9,
+        "top1": 0.1320754716981132,
+        "top1_strict": 0.1320754716981132,
+        "mrr": 0.3205151242887092,
+        "mrr_tie": 0.3205151242887092,
+        "tie_rate": 0.0,
+        "margin": -0.36353707014239955
+      },
+      "random/7/all/A1_jaccard": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818185,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "random/7/no_overlap/A1_jaccard": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818185,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "random/7/tight/A1_jaccard": {
+        "n": 53,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 0.0,
+        "mrr": 1.0,
+        "mrr_tie": 0.18181818181818182,
+        "tie_rate": 1.0,
+        "margin": 0.0
+      },
+      "random/7/all/A2_centroid": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.02631578947368421,
+        "top1_strict": 0.02631578947368421,
+        "mrr": 0.1768379281537176,
+        "mrr_tie": 0.1768379281537176,
+        "tie_rate": 0.0,
+        "margin": -0.08992212148089158
+      },
+      "random/7/no_overlap/A2_centroid": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.02631578947368421,
+        "top1_strict": 0.02631578947368421,
+        "mrr": 0.1768379281537176,
+        "mrr_tie": 0.1768379281537176,
+        "tie_rate": 0.0,
+        "margin": -0.08992212148089158
+      },
+      "random/7/tight/A2_centroid": {
+        "n": 53,
+        "k": 9,
+        "top1": 0.03773584905660377,
+        "top1_strict": 0.03773584905660377,
+        "mrr": 0.19627133872416888,
+        "mrr_tie": 0.19627133872416888,
+        "tie_rate": 0.0,
+        "margin": -0.08829080046347852
+      },
+      "random/7/all/A3_m_cosine": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.7105263157894737,
+        "top1_strict": 0.7105263157894737,
+        "mrr": 0.7572890559732665,
+        "mrr_tie": 0.7572890559732665,
+        "tie_rate": 0.0,
+        "margin": 0.029211778389780146
+      },
+      "random/7/no_overlap/A3_m_cosine": {
+        "n": 76,
+        "k": 9,
+        "top1": 0.7105263157894737,
+        "top1_strict": 0.7105263157894737,
+        "mrr": 0.7572890559732665,
+        "mrr_tie": 0.7572890559732665,
+        "tie_rate": 0.0,
+        "margin": 0.029211778389780146
+      },
+      "random/7/tight/A3_m_cosine": {
+        "n": 53,
+        "k": 9,
+        "top1": 0.8490566037735849,
+        "top1_strict": 0.8490566037735849,
+        "mrr": 0.8746031746031746,
+        "mrr_tie": 0.8746031746031746,
+        "tie_rate": 0.0,
+        "margin": 0.04757773313882216
+      },
+      "random/7/all/L0_weight_identity_oracle": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08838569092350362
+      },
+      "random/7/no_overlap/L0_weight_identity_oracle": {
+        "n": 76,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08838569092350362
+      },
+      "random/7/tight/L0_weight_identity_oracle": {
+        "n": 53,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.011294850166982456
+      },
+      "random/all/all/A0_random": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.08978328173374613,
+        "top1_strict": 0.08978328173374613,
+        "mrr": 0.2854698019558701,
+        "mrr_tie": 0.2854698019558701,
+        "tie_rate": 0.0,
+        "margin": -0.4052509193518677
+      },
+      "random/all/no_overlap/A0_random": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.08832807570977919,
+        "top1_strict": 0.08832807570977919,
+        "mrr": 0.2856817385208552,
+        "mrr_tie": 0.2856817385208552,
+        "tie_rate": 0.0,
+        "margin": -0.40196155424683516
+      },
+      "random/all/tight/A0_random": {
+        "n": 242,
+        "k": 9,
+        "top1": 0.08677685950413223,
+        "top1_strict": 0.08677685950413223,
+        "mrr": 0.28450577200577204,
+        "mrr_tie": 0.28450577200577204,
+        "tie_rate": 0.0,
+        "margin": -0.4038576344733103
+      },
+      "random/all/all/A1_jaccard": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.9752321981424149,
+        "top1_strict": 0.018575851393188854,
+        "mrr": 0.9876160990712074,
+        "mrr_tie": 0.19664133596022146,
+        "tie_rate": 0.9786721706226349,
+        "margin": -0.001287257662129476
+      },
+      "random/all/no_overlap/A1_jaccard": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.9747634069400631,
+        "top1_strict": 0.0,
+        "mrr": 0.9873817034700315,
+        "mrr_tie": 0.18143580919606161,
+        "tie_rate": 0.9971959341044514,
+        "margin": -0.002969220879984203
+      },
+      "random/all/tight/A1_jaccard": {
+        "n": 242,
+        "k": 9,
+        "top1": 0.9710743801652892,
+        "top1_strict": 0.024793388429752067,
+        "mrr": 0.9855371900826446,
+        "mrr_tie": 0.20166541447533182,
+        "tie_rate": 0.9719926538108357,
+        "margin": -0.0015384543933405364
+      },
+      "random/all/all/A2_centroid": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.09287925696594428,
+        "top1_strict": 0.09287925696594428,
+        "mrr": 0.2381529804904418,
+        "mrr_tie": 0.2381529804904418,
+        "tie_rate": 0.0,
+        "margin": -0.09061050341225262
+      },
+      "random/all/no_overlap/A2_centroid": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.08832807570977919,
+        "top1_strict": 0.08832807570977919,
+        "mrr": 0.23372264783936708,
+        "mrr_tie": 0.23372264783936708,
+        "tie_rate": 0.0,
+        "margin": -0.09195362224187761
+      },
+      "random/all/tight/A2_centroid": {
+        "n": 242,
+        "k": 9,
+        "top1": 0.10743801652892562,
+        "top1_strict": 0.10743801652892562,
+        "mrr": 0.2609192575101666,
+        "mrr_tie": 0.2609192575101666,
+        "tie_rate": 0.0,
+        "margin": -0.08717893999962767
+      },
+      "random/all/all/A3_m_cosine": {
+        "n": 323,
+        "k": 9,
+        "top1": 0.6780185758513931,
+        "top1_strict": 0.6780185758513931,
+        "mrr": 0.7445021868396481,
+        "mrr_tie": 0.7445021868396481,
+        "tie_rate": 0.0,
+        "margin": 0.02501897361625459
+      },
+      "random/all/no_overlap/A3_m_cosine": {
+        "n": 317,
+        "k": 9,
+        "top1": 0.6750788643533123,
+        "top1_strict": 0.6750788643533123,
+        "mrr": 0.7412435531520705,
+        "mrr_tie": 0.7412435531520705,
+        "tie_rate": 0.0,
+        "margin": 0.024219175242475154
+      },
+      "random/all/tight/A3_m_cosine": {
+        "n": 242,
+        "k": 9,
+        "top1": 0.756198347107438,
+        "top1_strict": 0.756198347107438,
+        "mrr": 0.8141102584284402,
+        "mrr_tie": 0.8141102584284402,
+        "tie_rate": 0.0,
+        "margin": 0.037514871309611425
+      },
+      "random/all/all/L0_weight_identity_oracle": {
+        "n": 323,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08802559260007578
+      },
+      "random/all/no_overlap/L0_weight_identity_oracle": {
+        "n": 317,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.08955255027538367
+      },
+      "random/all/tight/L0_weight_identity_oracle": {
+        "n": 242,
+        "k": 9,
+        "top1": 1.0,
+        "top1_strict": 1.0,
+        "mrr": 1.0,
+        "mrr_tie": 1.0,
+        "tie_rate": 0.0,
+        "margin": 0.0107267669240481
+      }
+    },
+    "models": [
+      {
+        "label": "L9 vector-only logreg",
+        "features": "vector",
+        "feature_description": "m*b and |m-b| (vector-only learned metric)",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1153,
+        "val_cases": 247,
+        "best_param": {
+          "C": 0.0003
+        },
+        "val": {
+          "n": 247,
+          "k": 9,
+          "top1": 0.8178137651821862,
+          "top1_strict": 0.8178137651821862,
+          "mrr": 0.8800478761005076,
+          "mrr_tie": 0.8800478761005076,
+          "tie_rate": 0.0,
+          "margin": 1.3540610779453397
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8299595141700404,
+            "top1_strict": 0.8299595141700404,
+            "mrr": 0.8930659983291561,
+            "mrr_tie": 0.8930659983291561,
+            "tie_rate": 0.0,
+            "margin": 1.5292742295035395,
+            "delta_vs_A3": {
+              "delta": 0.16194331983805665,
+              "ci_low": 0.10526315789473695,
+              "ci_high": 0.21862348178137647
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8257261410788381,
+            "top1_strict": 0.8257261410788381,
+            "mrr": 0.8904037410261476,
+            "mrr_tie": 0.8904037410261476,
+            "tie_rate": 0.0,
+            "margin": 1.5042230769499738,
+            "delta_vs_A3": {
+              "delta": 0.16182572614107882,
+              "ci_low": 0.10788381742738584,
+              "ci_high": 0.21991701244813278
+            }
+          },
+          "9/tight": {
+            "n": 189,
+            "k": 9,
+            "top1": 0.8412698412698413,
+            "top1_strict": 0.8412698412698413,
+            "mrr": 0.897581254724112,
+            "mrr_tie": 0.897581254724112,
+            "tie_rate": 0.0,
+            "margin": 1.6049392231161084,
+            "delta_vs_A3": {
+              "delta": 0.11111111111111116,
+              "ci_low": 0.05291005291005291,
+              "ci_high": 0.16402116402116407
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "9",
+        "model_type": "logreg",
+        "include_level": false,
+        "train_cases": 1153,
+        "val_cases": 247,
+        "best_param": {
+          "C": 0.0003
+        },
+        "val": {
+          "n": 247,
+          "k": 9,
+          "top1": 0.8461538461538461,
+          "top1_strict": 0.8461538461538461,
+          "mrr": 0.8993525480367586,
+          "mrr_tie": 0.8993525480367586,
+          "tie_rate": 0.0,
+          "margin": 1.533192427055744
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8582995951417004,
+            "top1_strict": 0.8582995951417004,
+            "mrr": 0.9133089133089133,
+            "mrr_tie": 0.9133089133089133,
+            "tie_rate": 0.0,
+            "margin": 1.729557317461997,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.13755060728744936,
+              "ci_high": 0.24696356275303644
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8547717842323651,
+            "top1_strict": 0.8547717842323651,
+            "mrr": 0.9111506289929525,
+            "mrr_tie": 0.9111506289929525,
+            "tie_rate": 0.0,
+            "margin": 1.7118110236414545,
+            "delta_vs_A3": {
+              "delta": 0.1908713692946058,
+              "ci_low": 0.13278008298755195,
+              "ci_high": 0.24896265560165975
+            }
+          },
+          "9/tight": {
+            "n": 189,
+            "k": 9,
+            "top1": 0.8677248677248677,
+            "top1_strict": 0.8677248677248677,
+            "mrr": 0.9174225245653816,
+            "mrr_tie": 0.9174225245653816,
+            "tie_rate": 0.0,
+            "margin": 1.818220384309206,
+            "delta_vs_A3": {
+              "delta": 0.13756613756613756,
+              "ci_low": 0.07936507936507942,
+              "ci_high": 0.19047619047619047
+            }
+          }
+        }
+      },
+      {
+        "label": "L9 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "9",
+        "model_type": "hgb",
+        "include_level": false,
+        "train_cases": 1153,
+        "val_cases": 247,
+        "best_param": {
+          "max_iter": 100
+        },
+        "val": {
+          "n": 247,
+          "k": 9,
+          "top1": 0.8340080971659919,
+          "top1_strict": 0.8340080971659919,
+          "mrr": 0.8833863504916136,
+          "mrr_tie": 0.8832002792529108,
+          "tie_rate": 0.0008996851102114259,
+          "margin": 0.3619478724867017
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8825910931174089,
+            "top1_strict": 0.8744939271255061,
+            "mrr": 0.9216518861255704,
+            "mrr_tie": 0.9172177237966712,
+            "tie_rate": 0.0031488978857399917,
+            "margin": 0.3818816126930471,
+            "delta_vs_A3": {
+              "delta": 0.20647773279352233,
+              "ci_low": 0.1417004048582996,
+              "ci_high": 0.27125506072874495
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8796680497925311,
+            "top1_strict": 0.8713692946058091,
+            "mrr": 0.9197013106764145,
+            "mrr_tie": 0.915156754264638,
+            "tie_rate": 0.0032272936837252197,
+            "margin": 0.37258288249790117,
+            "delta_vs_A3": {
+              "delta": 0.20746887966804983,
+              "ci_low": 0.13692946058091282,
+              "ci_high": 0.26970954356846477
+            }
+          },
+          "9/tight": {
+            "n": 189,
+            "k": 9,
+            "top1": 0.9259259259259259,
+            "top1_strict": 0.9259259259259259,
+            "mrr": 0.9516964810615605,
+            "mrr_tie": 0.9516964810615605,
+            "tie_rate": 0.0,
+            "margin": 0.4420911569270477,
+            "delta_vs_A3": {
+              "delta": 0.1957671957671958,
+              "ci_low": 0.12698412698412698,
+              "ci_high": 0.26455026455026454
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 vector+geom logreg",
+        "features": "vector_geom",
+        "feature_description": "vector features + cosine/Jaccard",
+        "scope": "combined",
+        "model_type": "logreg",
+        "include_level": true,
+        "train_cases": 1508,
+        "val_cases": 323,
+        "best_param": {
+          "C": 0.003
+        },
+        "val": {
+          "n": 323,
+          "k": 9,
+          "top1": 0.8390092879256966,
+          "top1_strict": 0.8390092879256966,
+          "mrr": 0.8849783773158386,
+          "mrr_tie": 0.8849783773158386,
+          "tie_rate": 0.0,
+          "margin": 2.957414829327196
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.8582995951417004,
+            "top1_strict": 0.8582995951417004,
+            "mrr": 0.911650922177238,
+            "mrr_tie": 0.911650922177238,
+            "tie_rate": 0.0,
+            "margin": 2.9574086130062467,
+            "delta_vs_A3": {
+              "delta": 0.19028340080971662,
+              "ci_low": 0.1336032388663968,
+              "ci_high": 0.2510121457489878
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.8547717842323651,
+            "top1_strict": 0.8547717842323651,
+            "mrr": 0.9094513600737667,
+            "mrr_tie": 0.9094513600737667,
+            "tie_rate": 0.0,
+            "margin": 2.951810587595247,
+            "delta_vs_A3": {
+              "delta": 0.1908713692946058,
+              "ci_low": 0.13278008298755184,
+              "ci_high": 0.25311203319502074
+            }
+          },
+          "9/tight": {
+            "n": 189,
+            "k": 9,
+            "top1": 0.8624338624338624,
+            "top1_strict": 0.8624338624338624,
+            "mrr": 0.9130511463844797,
+            "mrr_tie": 0.9130511463844797,
+            "tie_rate": 0.0,
+            "margin": 3.090571113581676,
+            "delta_vs_A3": {
+              "delta": 0.13227513227513232,
+              "ci_low": 0.06878306878306883,
+              "ci_high": 0.19047619047619047
+            }
+          },
+          "7/all": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.868421052631579,
+            "top1_strict": 0.868421052631579,
+            "mrr": 0.8990131578947367,
+            "mrr_tie": 0.8990131578947367,
+            "tie_rate": 0.0,
+            "margin": 3.785935729869984,
+            "delta_vs_A3": {
+              "delta": 0.1578947368421053,
+              "ci_low": 0.07894736842105265,
+              "ci_high": 0.23684210526315796
+            }
+          },
+          "7/no_overlap": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.868421052631579,
+            "top1_strict": 0.868421052631579,
+            "mrr": 0.8990131578947367,
+            "mrr_tie": 0.8990131578947367,
+            "tie_rate": 0.0,
+            "margin": 3.785935729869984,
+            "delta_vs_A3": {
+              "delta": 0.1578947368421053,
+              "ci_low": 0.07894736842105265,
+              "ci_high": 0.23684210526315796
+            }
+          },
+          "7/tight": {
+            "n": 53,
+            "k": 9,
+            "top1": 0.9433962264150944,
+            "top1_strict": 0.9433962264150944,
+            "mrr": 0.9547169811320756,
+            "mrr_tie": 0.9547169811320756,
+            "tie_rate": 0.0,
+            "margin": 4.542929799857585,
+            "delta_vs_A3": {
+              "delta": 0.09433962264150941,
+              "ci_low": 0.018867924528301883,
+              "ci_high": 0.18867924528301883
+            }
+          },
+          "all/all": {
+            "n": 323,
+            "k": 9,
+            "top1": 0.8606811145510835,
+            "top1_strict": 0.8606811145510835,
+            "mrr": 0.9086773305813554,
+            "mrr_tie": 0.9086773305813554,
+            "tie_rate": 0.0,
+            "margin": 3.152356169915361,
+            "delta_vs_A3": {
+              "delta": 0.1826625386996904,
+              "ci_low": 0.1331269349845201,
+              "ci_high": 0.2321981424148607
+            }
+          },
+          "all/no_overlap": {
+            "n": 317,
+            "k": 9,
+            "top1": 0.8580441640378549,
+            "top1_strict": 0.8580441640378549,
+            "mrr": 0.9069488257974063,
+            "mrr_tie": 0.9069488257974063,
+            "tie_rate": 0.0,
+            "margin": 3.1517901169734173,
+            "delta_vs_A3": {
+              "delta": 0.18296529968454256,
+              "ci_low": 0.13249211356466872,
+              "ci_high": 0.2302839116719243
+            }
+          },
+          "all/tight": {
+            "n": 242,
+            "k": 9,
+            "top1": 0.8801652892561983,
+            "top1_strict": 0.8801652892561983,
+            "mrr": 0.9221763085399448,
+            "mrr_tie": 0.9221763085399448,
+            "tie_rate": 0.0,
+            "margin": 3.408649668840449,
+            "delta_vs_A3": {
+              "delta": 0.12396694214876025,
+              "ci_low": 0.07438016528925617,
+              "ci_high": 0.1776859504132231
+            }
+          }
+        }
+      },
+      {
+        "label": "L9+L7 text+geom HGB",
+        "features": "text_geom",
+        "feature_description": "cosine/Jaccard + overlap/counts (no weight delta)",
+        "scope": "combined",
+        "model_type": "hgb",
+        "include_level": true,
+        "train_cases": 1508,
+        "val_cases": 323,
+        "best_param": {
+          "max_iter": 100
+        },
+        "val": {
+          "n": 323,
+          "k": 9,
+          "top1": 0.8668730650154799,
+          "top1_strict": 0.8606811145510835,
+          "mrr": 0.9078935082805052,
+          "mrr_tie": 0.9023764126158954,
+          "tie_rate": 0.00894392844857241,
+          "margin": 0.41226900356161156
+        },
+        "test": {
+          "9/all": {
+            "n": 247,
+            "k": 9,
+            "top1": 0.9068825910931174,
+            "top1_strict": 0.8825910931174089,
+            "mrr": 0.9332979885611465,
+            "mrr_tie": 0.921216008462972,
+            "tie_rate": 0.009896536212325687,
+            "margin": 0.37289606137347614,
+            "delta_vs_A3": {
+              "delta": 0.21457489878542513,
+              "ci_low": 0.1497975708502024,
+              "ci_high": 0.27935222672064786
+            }
+          },
+          "9/no_overlap": {
+            "n": 241,
+            "k": 9,
+            "top1": 0.9045643153526971,
+            "top1_strict": 0.8796680497925311,
+            "mrr": 0.9316373575709674,
+            "mrr_tie": 0.9192545812877763,
+            "tie_rate": 0.010142923005993546,
+            "margin": 0.362479211798508,
+            "delta_vs_A3": {
+              "delta": 0.2157676348547718,
+              "ci_low": 0.1452282157676349,
+              "ci_high": 0.2821576763485477
+            }
+          },
+          "9/tight": {
+            "n": 189,
+            "k": 9,
+            "top1": 0.9417989417989417,
+            "top1_strict": 0.9259259259259259,
+            "mrr": 0.9584656084656085,
+            "mrr_tie": 0.9526455026455027,
+            "tie_rate": 0.0023515579071134627,
+            "margin": 0.4324720114722923,
+            "delta_vs_A3": {
+              "delta": 0.1957671957671958,
+              "ci_low": 0.12169312169312174,
+              "ci_high": 0.26455026455026454
+            }
+          },
+          "7/all": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.9342105263157895,
+            "top1_strict": 0.9342105263157895,
+            "mrr": 0.9526315789473685,
+            "mrr_tie": 0.9526315789473685,
+            "tie_rate": 0.0,
+            "margin": 0.563649443580645,
+            "delta_vs_A3": {
+              "delta": 0.22368421052631582,
+              "ci_low": 0.13157894736842102,
+              "ci_high": 0.3157894736842105
+            }
+          },
+          "7/no_overlap": {
+            "n": 76,
+            "k": 9,
+            "top1": 0.9342105263157895,
+            "top1_strict": 0.9342105263157895,
+            "mrr": 0.9526315789473685,
+            "mrr_tie": 0.9526315789473685,
+            "tie_rate": 0.0,
+            "margin": 0.563649443580645,
+            "delta_vs_A3": {
+              "delta": 0.22368421052631582,
+              "ci_low": 0.13157894736842102,
+              "ci_high": 0.3157894736842105
+            }
+          },
+          "7/tight": {
+            "n": 53,
+            "k": 9,
+            "top1": 0.9622641509433962,
+            "top1_strict": 0.9622641509433962,
+            "mrr": 0.9723270440251572,
+            "mrr_tie": 0.9723270440251572,
+            "tie_rate": 0.0,
+            "margin": 0.6519577799054143,
+            "delta_vs_A3": {
+              "delta": 0.1132075471698113,
+              "ci_low": 0.037735849056603765,
+              "ci_high": 0.2075471698113207
+            }
+          },
+          "all/all": {
+            "n": 323,
+            "k": 9,
+            "top1": 0.913312693498452,
+            "top1_strict": 0.8947368421052632,
+            "mrr": 0.937847068652022,
+            "mrr_tie": 0.9286079074004772,
+            "tie_rate": 0.007567939456484349,
+            "margin": 0.417779210128104,
+            "delta_vs_A3": {
+              "delta": 0.21671826625387003,
+              "ci_low": 0.1609907120743035,
+              "ci_high": 0.27244582043343657
+            }
+          },
+          "all/no_overlap": {
+            "n": 317,
+            "k": 9,
+            "top1": 0.9116719242902208,
+            "top1_strict": 0.8927444794952681,
+            "mrr": 0.936670672475089,
+            "mrr_tie": 0.9272566375090033,
+            "tie_rate": 0.0077111812127585,
+            "margin": 0.41070929891346825,
+            "delta_vs_A3": {
+              "delta": 0.21766561514195581,
+              "ci_low": 0.1608832807570978,
+              "ci_high": 0.27129337539432175
+            }
+          },
+          "all/tight": {
+            "n": 242,
+            "k": 9,
+            "top1": 0.9462809917355371,
+            "top1_strict": 0.9338842975206612,
+            "mrr": 0.9615013774104684,
+            "mrr_tie": 0.9569559228650137,
+            "tie_rate": 0.0018365472910927456,
+            "margin": 0.48054120869111655,
+            "delta_vs_A3": {
+              "delta": 0.1776859504132231,
+              "ci_low": 0.11983471074380159,
+              "ci_high": 0.23553719008264462
+            }
+          }
+        }
+      }
+    ]
+  },
+  "controls": {
+    "label_shuffle_L9": {
+      "n": 250,
+      "k": 9,
+      "top1": 0.12,
+      "top1_strict": 0.12,
+      "mrr": 0.30071428571428577,
+      "mrr_tie": 0.30071428571428577,
+      "tie_rate": 0.0,
+      "margin": -3.368454090360984
+    }
+  },
+  "notes": [
+    "Grouped split hashes the sorted bridge-word set; exact bridge-word sets are disjoint between train and test. Token-level overlap is reported because different bridge-word sets can still share tokens. Random split is a secondary stability check; bridge-word sets are nearly unique here, so it is not a strong leakage stress test.",
+    "All cases are clean (non-degenerate), weight-band matched, and exclude near-exact duplicate bridges (cos > 0.9999 to the true bridge).",
+    "weight_delta is excluded from all model features. The true bridge is the only candidate with delta exactly 0, so a weight_delta feature is an oracle identifier (L0_weight_identity_oracle); it is retained only as a leakage diagnostic, not as a selector.",
+    "A1 Jaccard is tie-dominated at L9/L7, so strict top-1 and MRR_tie are the relevant columns.",
+    "The vector-only model uses m*b and |m-b|. It does not see words, child vectors, weights, or bridge ids.",
+    "text_geom is the stronger text/geometry re-ranker baseline; text_only isolates word overlap/counts without any vector or child geometry.",
+    "5/2154 cases had no candidate inside the initial weight band and used the final fallback; weight features are excluded.",
+    "Models are selected on validation cases and refit on train+val; test is evaluated once."
+  ]
+}

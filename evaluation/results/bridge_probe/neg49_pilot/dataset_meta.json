@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-10-21T11:29:47.599499+00:00",
+  "runtime_seconds": 50.095749616622925,
+  "levels": [
+    9
+  ],
+  "n_requested": 60,
+  "negatives": 49,
+  "near_limit": 300,
+  "seed": 42,
+  "max_words": 8,
+  "cases": 58,
+  "cases_per_level": {
+    "9": 58
+  },
+  "no_overlap_cases": 57,
+  "recon_error_max": 0.0,
+  "word_cache_hits": 706,
+  "word_cache_misses": 2310,
+  "data": {
+    "9": {
+      "level": 9,
+      "requested": 60,
+      "mb_ids_scanned": 1683,
+      "mb_ids_sampled": 60,
+      "mb_docs_found": 60,
+      "children_found": 180,
+      "dropped": {
+        "collinear_children": 2
+      },
+      "edge_types": {
+        "None": 58
+      },
+      "triads": 58,
+      "degenerate": 0,
+      "clean": 58,
+      "no_overlap": 57,
+      "recon_error": {
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "below_1e-4": 1.0,
+        "below_1e-3": 1.0
+      },
+      "cached_cases": 58,
+      "skipped": {},
+      "band_tolerances": {
+        "0.3": 12,
+        "0.15": 22,
+        "1.0": 11,
+        "0.6": 5,
+        "0.05": 8
+      }
+    }
+  },
+  "mongo_db": "barygraph_poc",
+  "mongo_collection": "barygraph"
+}

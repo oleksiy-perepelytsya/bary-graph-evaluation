@@ -1,0 +1,787 @@
+{
+  "generated_at": "2026-10-21T20:31:52.393728+00:00",
+  "runtime_seconds": 382.05017495155334,
+  "levels": [
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2
+  ],
+  "workers": 8,
+  "chunk": 100,
+  "mb_candidates": 18401,
+  "units_parsed": 18401,
+  "drops": {},
+  "duplicate_bridge_links": 0,
+  "per_level": {
+    "9": {
+      "mb_candidates": 10299,
+      "parsed": 10299,
+      "words_cm1": {
+        "n": 10299,
+        "median": 6.0,
+        "mean": 6.551218564909214,
+        "p95": 8.0,
+        "max": 12.0
+      },
+      "words_cm2": {
+        "n": 10299,
+        "median": 6.0,
+        "mean": 6.69433925623847,
+        "p95": 9.0,
+        "max": 12.0
+      },
+      "words_bridge": {
+        "n": 10299,
+        "median": 8.0,
+        "mean": 7.858044470336926,
+        "p95": 9.0,
+        "max": 12.0
+      },
+      "words_total": {
+        "n": 10299,
+        "median": 20.0,
+        "mean": 19.912127391008834,
+        "p95": 24.0,
+        "max": 29.0
+      },
+      "baseline": {
+        "level": 9,
+        "n": 10299,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 10299,
+          "median": 0.8948870301246643,
+          "mean": 0.8828579156198991,
+          "p95": 0.9826444447040558,
+          "max": 1.0
+        },
+        "relres_children_words": {
+          "n": 10299,
+          "median": 0.4585042893886566,
+          "mean": 0.45725675175740854,
+          "p95": 0.7089577913284302,
+          "max": 0.9907846450805664
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 10299,
+          "median": 0.9688239097595215,
+          "mean": 0.9616647857359885,
+          "p95": 0.9958737850189209,
+          "max": 1.0000001192092896
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 10299,
+          "median": 0.24970416724681854,
+          "mean": 0.2569981407083244,
+          "p95": 0.4344887733459473,
+          "max": 0.7283294796943665
+        },
+        "cos_child_edge_oracle": {
+          "n": 10299,
+          "median": 0.9708617925643921,
+          "mean": 0.9479530569198861,
+          "p95": 0.9990979313850403,
+          "max": 1.0
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 10299,
+          "median": 0.9930346608161926,
+          "mean": 0.9853020144013575,
+          "p95": 0.9998574316501617,
+          "max": 1.0
+        },
+        "cos_global_mean": {
+          "n": 10299,
+          "median": 0.8488940596580505,
+          "mean": 0.8395067201978849,
+          "p95": 0.9290230453014374,
+          "max": 0.9657909274101257
+        }
+      }
+    },
+    "8": {
+      "mb_candidates": 4100,
+      "parsed": 4100,
+      "words_cm1": {
+        "n": 4100,
+        "median": 8.0,
+        "mean": 7.94219512195122,
+        "p95": 10.0,
+        "max": 12.0
+      },
+      "words_cm2": {
+        "n": 4100,
+        "median": 8.0,
+        "mean": 7.924634146341464,
+        "p95": 10.0,
+        "max": 12.0
+      },
+      "words_bridge": {
+        "n": 4100,
+        "median": 13.0,
+        "mean": 12.24609756097561,
+        "p95": 16.0,
+        "max": 19.0
+      },
+      "words_total": {
+        "n": 4100,
+        "median": 28.0,
+        "mean": 27.958536585365852,
+        "p95": 33.0,
+        "max": 40.0
+      },
+      "baseline": {
+        "level": 8,
+        "n": 4100,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 4100,
+          "median": 0.9094517230987549,
+          "mean": 0.903803684725994,
+          "p95": 0.9869105041027069,
+          "max": 0.9991721510887146
+        },
+        "relres_children_words": {
+          "n": 4100,
+          "median": 0.4255544990301132,
+          "mean": 0.4168343672819617,
+          "p95": 0.6352987825870512,
+          "max": 0.8285927772521973
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 4100,
+          "median": 0.9545417428016663,
+          "mean": 0.9499302701543018,
+          "p95": 0.9878879517316819,
+          "max": 0.9994388222694397
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 4100,
+          "median": 0.30152373015880585,
+          "mean": 0.30335812870594786,
+          "p95": 0.4560787454247474,
+          "max": 0.595628023147583
+        },
+        "cos_child_edge_oracle": {
+          "n": 4100,
+          "median": 0.9358217716217041,
+          "mean": 0.9274556703829184,
+          "p95": 0.9967764288187027,
+          "max": 0.9999985694885254
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 4100,
+          "median": 0.9833878576755524,
+          "mean": 0.9784152750561877,
+          "p95": 0.9995734542608261,
+          "max": 0.9999991655349731
+        },
+        "cos_global_mean": {
+          "n": 4100,
+          "median": 0.8723745942115784,
+          "mean": 0.863885990221326,
+          "p95": 0.9287212193012238,
+          "max": 0.960944414138794
+        }
+      }
+    },
+    "7": {
+      "mb_candidates": 2258,
+      "parsed": 2258,
+      "words_cm1": {
+        "n": 2258,
+        "median": 11.0,
+        "mean": 11.784322409211692,
+        "p95": 16.0,
+        "max": 19.0
+      },
+      "words_cm2": {
+        "n": 2258,
+        "median": 12.0,
+        "mean": 12.12488928255093,
+        "p95": 16.0,
+        "max": 20.0
+      },
+      "words_bridge": {
+        "n": 2258,
+        "median": 16.0,
+        "mean": 15.58680248007086,
+        "p95": 17.0,
+        "max": 23.0
+      },
+      "words_total": {
+        "n": 2258,
+        "median": 36.0,
+        "mean": 37.75642161204606,
+        "p95": 48.0,
+        "max": 55.0
+      },
+      "baseline": {
+        "level": 7,
+        "n": 2258,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 2258,
+          "median": 0.8005837798118591,
+          "mean": 0.8038005709542544,
+          "p95": 0.9619098752737045,
+          "max": 0.99563068151474
+        },
+        "relres_children_words": {
+          "n": 2258,
+          "median": 0.6315318644046783,
+          "mean": 0.6072544863924344,
+          "p95": 0.8125974267721177,
+          "max": 1.0145931243896484
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 2258,
+          "median": 0.9299676716327667,
+          "mean": 0.9241951827563682,
+          "p95": 0.976476612687111,
+          "max": 0.9942731857299805
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 2258,
+          "median": 0.3742523342370987,
+          "mean": 0.3766662092521404,
+          "p95": 0.5526277989149094,
+          "max": 0.7549063563346863
+        },
+        "cos_child_edge_oracle": {
+          "n": 2258,
+          "median": 0.955435037612915,
+          "mean": 0.940206099153093,
+          "p95": 0.99927359521389,
+          "max": 0.9999997019767761
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 2258,
+          "median": 0.9861803650856018,
+          "mean": 0.9787051292834185,
+          "p95": 0.9999747633934021,
+          "max": 1.0
+        },
+        "cos_global_mean": {
+          "n": 2258,
+          "median": 0.9019082486629486,
+          "mean": 0.8929275894080568,
+          "p95": 0.9463456243276596,
+          "max": 0.9675836563110352
+        }
+      }
+    },
+    "6": {
+      "mb_candidates": 921,
+      "parsed": 921,
+      "words_cm1": {
+        "n": 921,
+        "median": 16.0,
+        "mean": 15.86970684039088,
+        "p95": 19.0,
+        "max": 24.0
+      },
+      "words_cm2": {
+        "n": 921,
+        "median": 16.0,
+        "mean": 15.866449511400651,
+        "p95": 19.0,
+        "max": 24.0
+      },
+      "words_bridge": {
+        "n": 921,
+        "median": 24.0,
+        "mean": 23.95114006514658,
+        "p95": 32.0,
+        "max": 34.0
+      },
+      "words_total": {
+        "n": 921,
+        "median": 55.0,
+        "mean": 55.31161780673181,
+        "p95": 65.0,
+        "max": 73.0
+      },
+      "baseline": {
+        "level": 6,
+        "n": 921,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 921,
+          "median": 0.8963342905044556,
+          "mean": 0.8889795058972154,
+          "p95": 0.9477605223655701,
+          "max": 0.9721812009811401
+        },
+        "relres_children_words": {
+          "n": 921,
+          "median": 0.4553368091583252,
+          "mean": 0.4626403880203456,
+          "p95": 0.606617271900177,
+          "max": 0.8395365476608276
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 921,
+          "median": 0.9317259192466736,
+          "mean": 0.9286108510113694,
+          "p95": 0.967133641242981,
+          "max": 0.9889618158340454
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 921,
+          "median": 0.3695243299007416,
+          "mean": 0.37091183710952536,
+          "p95": 0.4899322986602783,
+          "max": 0.6630013585090637
+        },
+        "cos_child_edge_oracle": {
+          "n": 921,
+          "median": 0.9814109206199646,
+          "mean": 0.9703729759727834,
+          "p95": 0.9935591220855713,
+          "max": 0.9981817007064819
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 921,
+          "median": 0.99948650598526,
+          "mean": 0.9939742577580754,
+          "p95": 0.999995231628418,
+          "max": 1.0
+        },
+        "cos_global_mean": {
+          "n": 921,
+          "median": 0.9127320647239685,
+          "mean": 0.9071118153397086,
+          "p95": 0.9500628113746643,
+          "max": 0.9735586643218994
+        }
+      }
+    },
+    "5": {
+      "mb_candidates": 415,
+      "parsed": 415,
+      "words_cm1": {
+        "n": 415,
+        "median": 20.0,
+        "mean": 20.002409638554216,
+        "p95": 25.0,
+        "max": 33.0
+      },
+      "words_cm2": {
+        "n": 415,
+        "median": 20.0,
+        "mean": 20.250602409638553,
+        "p95": 26.0,
+        "max": 33.0
+      },
+      "words_bridge": {
+        "n": 415,
+        "median": 31.0,
+        "mean": 31.197590361445783,
+        "p95": 36.0,
+        "max": 42.0
+      },
+      "words_total": {
+        "n": 415,
+        "median": 69.0,
+        "mean": 69.1855421686747,
+        "p95": 77.29999999999995,
+        "max": 99.0
+      },
+      "baseline": {
+        "level": 5,
+        "n": 415,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 415,
+          "median": 0.7879298329353333,
+          "mean": 0.7962102094328547,
+          "p95": 0.9612716495990753,
+          "max": 0.9808536767959595
+        },
+        "relres_children_words": {
+          "n": 415,
+          "median": 0.6512605547904968,
+          "mean": 0.6209800435836057,
+          "p95": 0.8210345447063445,
+          "max": 0.9204301834106445
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 415,
+          "median": 0.9166173934936523,
+          "mean": 0.9107934510851481,
+          "p95": 0.9640907168388366,
+          "max": 0.9892013072967529
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 415,
+          "median": 0.408369243144989,
+          "mean": 0.411968835721533,
+          "p95": 0.5705352425575256,
+          "max": 0.6938231587409973
+        },
+        "cos_child_edge_oracle": {
+          "n": 415,
+          "median": 0.9925073385238647,
+          "mean": 0.97352735809533,
+          "p95": 0.9988623321056366,
+          "max": 0.9996275901794434
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 415,
+          "median": 0.9990521669387817,
+          "mean": 0.990129686407296,
+          "p95": 0.9999650061130524,
+          "max": 0.9999998807907104
+        },
+        "cos_global_mean": {
+          "n": 415,
+          "median": 0.9413213729858398,
+          "mean": 0.9319057843771326,
+          "p95": 0.9695474326610565,
+          "max": 0.9859082102775574
+        }
+      }
+    },
+    "4": {
+      "mb_candidates": 253,
+      "parsed": 253,
+      "words_cm1": {
+        "n": 253,
+        "median": 31.0,
+        "mean": 31.58498023715415,
+        "p95": 36.0,
+        "max": 42.0
+      },
+      "words_cm2": {
+        "n": 253,
+        "median": 31.0,
+        "mean": 31.40316205533597,
+        "p95": 37.39999999999998,
+        "max": 44.0
+      },
+      "words_bridge": {
+        "n": 253,
+        "median": 37.0,
+        "mean": 37.29644268774704,
+        "p95": 45.0,
+        "max": 59.0
+      },
+      "words_total": {
+        "n": 253,
+        "median": 100.0,
+        "mean": 99.63636363636364,
+        "p95": 109.0,
+        "max": 121.0
+      },
+      "baseline": {
+        "level": 4,
+        "n": 253,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 253,
+          "median": 0.9036860466003418,
+          "mean": 0.9007616113768264,
+          "p95": 0.9552317142486572,
+          "max": 0.9631156921386719
+        },
+        "relres_children_words": {
+          "n": 253,
+          "median": 0.43889403343200684,
+          "mean": 0.4381654224848088,
+          "p95": 0.5748992323875427,
+          "max": 0.6877150535583496
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 253,
+          "median": 0.9263740181922913,
+          "mean": 0.9242755323059474,
+          "p95": 0.9637238025665283,
+          "max": 0.9731431007385254
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 253,
+          "median": 0.3837346136569977,
+          "mean": 0.38313516014413873,
+          "p95": 0.5024935245513916,
+          "max": 0.56201171875
+        },
+        "cos_child_edge_oracle": {
+          "n": 253,
+          "median": 0.9948608875274658,
+          "mean": 0.9927064154459082,
+          "p95": 0.9994738578796387,
+          "max": 0.9998783469200134
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 253,
+          "median": 0.9990423917770386,
+          "mean": 0.9978216900655874,
+          "p95": 0.999959397315979,
+          "max": 0.9999996423721313
+        },
+        "cos_global_mean": {
+          "n": 253,
+          "median": 0.938401460647583,
+          "mean": 0.9329628484993584,
+          "p95": 0.9648882865905761,
+          "max": 0.9818434119224548
+        }
+      }
+    },
+    "3": {
+      "mb_candidates": 78,
+      "parsed": 78,
+      "words_cm1": {
+        "n": 78,
+        "median": 38.0,
+        "mean": 38.34615384615385,
+        "p95": 44.74999999999996,
+        "max": 63.0
+      },
+      "words_cm2": {
+        "n": 78,
+        "median": 38.0,
+        "mean": 39.717948717948715,
+        "p95": 56.89999999999995,
+        "max": 65.0
+      },
+      "words_bridge": {
+        "n": 78,
+        "median": 62.0,
+        "mean": 61.91025641025641,
+        "p95": 70.0,
+        "max": 73.0
+      },
+      "words_total": {
+        "n": 78,
+        "median": 135.0,
+        "mean": 137.3846153846154,
+        "p95": 160.89999999999995,
+        "max": 187.0
+      },
+      "baseline": {
+        "level": 3,
+        "n": 78,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 78,
+          "median": 0.7667143046855927,
+          "mean": 0.7859425796912267,
+          "p95": 0.9056826770305633,
+          "max": 0.9202123284339905
+        },
+        "relres_children_words": {
+          "n": 78,
+          "median": 0.6830597817897797,
+          "mean": 0.6437070660102062,
+          "p95": 0.8129944413900375,
+          "max": 0.843189001083374
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 78,
+          "median": 0.8965915441513062,
+          "mean": 0.8968696777637188,
+          "p95": 0.9442807018756866,
+          "max": 0.9891313314437866
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 78,
+          "median": 0.4547712802886963,
+          "mean": 0.44799573165483964,
+          "p95": 0.5734046638011931,
+          "max": 0.6419780850410461
+        },
+        "cos_child_edge_oracle": {
+          "n": 78,
+          "median": 0.9947760999202728,
+          "mean": 0.9908365202255738,
+          "p95": 0.9997267782688141,
+          "max": 0.9999836683273315
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 78,
+          "median": 0.9979057013988495,
+          "mean": 0.996078990972959,
+          "p95": 0.9998606711626052,
+          "max": 0.9999982714653015
+        },
+        "cos_global_mean": {
+          "n": 78,
+          "median": 0.9628676474094391,
+          "mean": 0.9537655680607526,
+          "p95": 0.9800664067268372,
+          "max": 0.9836207628250122
+        }
+      }
+    },
+    "2": {
+      "mb_candidates": 77,
+      "parsed": 77,
+      "words_cm1": {
+        "n": 77,
+        "median": 62.0,
+        "mean": 62.77922077922078,
+        "p95": 67.60000000000001,
+        "max": 80.0
+      },
+      "words_cm2": {
+        "n": 77,
+        "median": 62.0,
+        "mean": 62.311688311688314,
+        "p95": 67.60000000000001,
+        "max": 75.0
+      },
+      "words_bridge": {
+        "n": 77,
+        "median": 74.0,
+        "mean": 75.50649350649351,
+        "p95": 98.20000000000002,
+        "max": 128.0
+      },
+      "words_total": {
+        "n": 77,
+        "median": 197.0,
+        "mean": 199.80519480519482,
+        "p95": 223.2,
+        "max": 255.0
+      },
+      "baseline": {
+        "level": 2,
+        "n": 77,
+        "skipped_missing_word_vec": 0,
+        "cos_children_words": {
+          "n": 77,
+          "median": 0.8976083993911743,
+          "mean": 0.8898478939935759,
+          "p95": 0.9394245028495789,
+          "max": 0.9627388715744019
+        },
+        "relres_children_words": {
+          "n": 77,
+          "median": 0.4525299370288849,
+          "mean": 0.46152683124913796,
+          "p95": 0.6219589471817017,
+          "max": 0.6875830888748169
+        },
+        "cos_children_plus_bridge_words": {
+          "n": 77,
+          "median": 0.9235071539878845,
+          "mean": 0.9216247409969182,
+          "p95": 0.9571606040000915,
+          "max": 0.9689244031906128
+        },
+        "relres_children_plus_bridge_words": {
+          "n": 77,
+          "median": 0.3911340534687042,
+          "mean": 0.3899139160072649,
+          "p95": 0.4979450345039368,
+          "max": 0.6051846742630005
+        },
+        "cos_child_edge_oracle": {
+          "n": 77,
+          "median": 0.9890049695968628,
+          "mean": 0.9850074168923614,
+          "p95": 0.9996750116348266,
+          "max": 0.999994158744812
+        },
+        "cos_child_plus_bridge_edge_oracle": {
+          "n": 77,
+          "median": 0.99573814868927,
+          "mean": 0.993522191976572,
+          "p95": 0.9998576998710632,
+          "max": 0.9999193549156189
+        },
+        "cos_global_mean": {
+          "n": 77,
+          "median": 0.9575742483139038,
+          "mean": 0.9537125446579673,
+          "p95": 0.9801202416419983,
+          "max": 0.9878286719322205
+        }
+      }
+    }
+  },
+  "vocabulary": {
+    "keys": 213574,
+    "source_l14": 139866,
+    "source_l15_fallback": 73708,
+    "bad_vectors": 0,
+    "n_nodes": {
+      "n": 213574,
+      "median": 2.0,
+      "mean": 2.4930515886765243,
+      "p95": 5.0,
+      "max": 6771.0
+    },
+    "n_l14": {
+      "n": 213574,
+      "median": 1.0,
+      "mean": 1.1881221496998697,
+      "p95": 4.0,
+      "max": 1330.0
+    },
+    "n_l15": {
+      "n": 213574,
+      "median": 0.0,
+      "mean": 1.4892262166743142,
+      "p95": 5.0,
+      "max": 6771.0
+    }
+  },
+  "output": {
+    "units": "/home/alex/Projects/barygraph-learning/evaluation/results/word_units/units.parquet",
+    "words": "/home/alex/Projects/barygraph-learning/evaluation/results/word_units/words.parquet",
+    "units_bytes": 329242050,
+    "words_bytes": 741982448
+  },
+  "schema": {
+    "units": [
+      "mb_id",
+      "level",
+      "mb_vec",
+      "c1_id",
+      "c2_id",
+      "c1_vec",
+      "c2_vec",
+      "bridge_vec",
+      "cm1_words",
+      "cm1_pos",
+      "cm2_words",
+      "cm2_pos",
+      "bridge_words",
+      "bridge_pos",
+      "n_cm1",
+      "n_cm2",
+      "n_bridge",
+      "n_words_total"
+    ],
+    "words": [
+      "word",
+      "pos",
+      "lang",
+      "vec",
+      "source_level",
+      "n_nodes",
+      "n_l14",
+      "n_l15"
+    ],
+    "vector_dim": 1024
+  },
+  "notes": [
+    "MB levels are 2-9; every non-structural baryedge at a level is one unit.",
+    "cm1/cm2/bridge word lists are unique (word, pos) keys, sorted by key.",
+    "Canonical word vector = mean of L14 word-node vectors when any exist, else mean of L15 sense vectors.",
+    "bridge_words and bridge_vec are stored for residual/oracle analysis; the planned model input is cm1+cm2 words only.",
+    "accumulated_weight and connection_strength are not stored.",
+    "bridge_id and edge_type are not stored; the bridge is recoverable from the MB id.",
+    "Baseline numbers are a sanity check on the parsed vocabulary, not a trained model.",
+    "cos_global_mean is a leave-one-out mean of the level's MB vectors (the target unit is excluded)."
+  ],
+  "baseline_recomputed_at": "2026-10-21T20:42:19.030993+00:00"
+}
